@@ -13,3 +13,5 @@ PSU: Data Management in R
   - [ ] 
 - [ ] ...?
 - [ ] End of term; drink a beer!
+
+Contact Bern ([docs](h2o.bern@gmail.com)) for questions regarding this repository.
