@@ -4,7 +4,9 @@ ESR505
 PSU: Data Management in R
 
 
-- [x] dplyer package ([docs](https://github.com/Bern67/ESR505.git))
+- [x] dplyer package ([docs](https://github.com/Bern67/ESR505.git)), 
+- [x] reshape2 package ([docs](http://cran.r-project.org/web/packages/reshape2/index.html))
+- [x] knitr package ([docs](http://yihui.name/knitr/))
 - [x] R colors ([docs](http://research.stowers-institute.org/efg/R/Color/Chart/index.htm))
 - [x] Markdown ([docs](http://kbroman.github.io/knitr_knutshell/pages/Rmarkdown.html))
   - [ ] Math anotation in R ([docs](http://vis.supstat.com/2013/04/mathematical-annotation-in-r/))
