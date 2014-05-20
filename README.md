@@ -9,7 +9,7 @@ PSU: Data Management in R
 - [x] ggplot ([docs](http://ggplot2.org/))
   - [x] R colors ([docs](http://research.stowers-institute.org/efg/R/Color/Chart/index.htm))
 
-- [ ] Refrence material on Brian's Git repository ([docs](https://github.com/bsteves/DataManagementClass))
+- [x] Refrence material on Brian's Git repository ([docs](https://github.com/bsteves/DataManagementClass))
   
 - [x] Markdown ([docs](http://kbroman.github.io/knitr_knutshell/pages/Rmarkdown.html))
   - [x] knitr package ([docs](http://yihui.name/knitr/))
@@ -17,10 +17,12 @@ PSU: Data Management in R
   - [x] Git for Scientists ([docs](http://nyuccl.org/pages/GitTutorial/))
   - [ ] Writing an r package from scratch ([docs](http://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/))
   - [ ] Test and push final ESR505 project to Git
-  - [ ] Submit Git url to Brian
+  - [x] Submit Git url to Brian
   - [ ] Start work on SEAK project
   - [ ] 
 - [ ] ...?
 - [ ] End of term; drink a beer!
 
-Contact Bern ([docs](h2o.bern@gmail.com)) for questions regarding this repository.
+___
+Contact Bern67 for questions regarding this repository.
+
