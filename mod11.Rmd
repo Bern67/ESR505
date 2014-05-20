@@ -40,7 +40,7 @@ Because fish condition is directly related to fish lenght and weight, we can loo
 ```{r qplot, fig.width=7,fig.height=6,message=FALSE, echo=FALSE,fig.cap="Rainbow Trout Lenght on Weight"} 
 # or include=FALSE hides both code and cosole ouput
 
-rbt <- read.csv("D:/R/R_DAnalysis/RBTBBC02.csv")
+rbt <- read.csv("RBTBBC02.csv")
 
 coolPlot1 <-function(rbt, Length_mm, Weight_g, RBT) {
   require(ggplot2)

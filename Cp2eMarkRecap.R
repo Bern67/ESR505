@@ -1,7 +1,7 @@
 # Bernard Romey 5/15/14
 # Population Estimate for Black Bear Lake
 
-rbt <- read.csv("D:/R/ESR505/RBTBBC02.csv")
+rbt <- read.csv("RBTBBC02.csv")
 
 library(reshape2)
 # Number of fish captured, and recapture in event 1 and 2.

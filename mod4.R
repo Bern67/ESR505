@@ -2,7 +2,7 @@
 # Module 4.  Filtering & subsetting data
 
 # Import original data file for analysis
-rbt <- read.csv("D:/R/R_DAnalysis/RBTBBC02.csv")
+rbt <- read.csv("RBTBBC02.csv")
 
 # Subset data for fish size by catagory
 age_1 <- subset(rbt, Length_mm <= 60)

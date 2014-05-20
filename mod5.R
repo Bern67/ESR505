@@ -2,7 +2,7 @@
 # Module 5.  Reshaping Data
 
 # Import original data file for analysis
-rbt <- read.csv("D:/R/R_DAnalysis/RBTBBC02.csv")
+rbt <- read.csv("RBTBBC02.csv")
 
 
 library(reshape2)

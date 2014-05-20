@@ -42,7 +42,7 @@ points(seAK_lon, seAK_lat, col = "yellow",bg="red", pch = 21, cex = 1.3)
 box()
 
 
-# Close up map of POW
+# Close up map of POW SEAK
 bbl <- map("worldHires", "canada",
            xlim=c(-134,-130), ylim=c(54.5, 56.5),
            col="gray90", fill=TRUE)

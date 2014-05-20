@@ -1,7 +1,7 @@
 # Bernard Romey 5/5/14
 # Module 10: Functions
 
-rbt <- read.csv("D:/R/R_DAnalysis/RBTBBC02.csv")
+rbt <- read.csv("RBTBBC02.csv")
 
 
 coolPlot1 <-function(rbt, Length_mm, Weight_g, RBT) {
