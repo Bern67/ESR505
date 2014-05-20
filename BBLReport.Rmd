@@ -6,7 +6,7 @@ Abundance, Age, Size, and Lake-shore Spawning of Rainbow Trout at Black Bear Lak
 ### Date: May 2014
 
 ```{r global_options,include=FALSE}
-opts_chunk$set(fig.width=7, fig.height=6, fig.path='D:/R/ESR505/figure/',
+opts_chunk$set(fig.width=7, fig.height=6, fig.path='figure/',
          echo=FALSE, warning=FALSE, message=FALSE)
 ```
 ____
@@ -14,7 +14,7 @@ ____
 ### Executive Summary
 
 ```{r CPE,}
-rbt <- read.csv("D:/R/ESR505/RBTBBC02.csv")
+rbt <- read.csv("RBTBBC02.csv")
  
 library(reshape2)
 # Number of fish captured, and recapture in event 1 and 2.
@@ -168,7 +168,6 @@ The results were multiplied by 100,000 to provide an appropriate scaling to the 
 A length-frequency histogram of the fish-length data (Figure 4) shows the catch varied by age group. Few small (range 40 to 200 mm) and large (range 320 to 410 mm) fish were caught, but the catch of intermediate-size fish (range 200 to 310 mm) was high. Based on age analysis data from this population, these three length classes correspond to ages 1 through 3, ages 6 and 7, and ages 4 and 5, respectively. Therefore, the majority of the fish caught were between ages 4 and 5.  Very few age 1 fish were caught during this study (Figure 5). This was primarily due to the net mesh size on both the fike nets and hoop traps being too large to capture fish less than 80 mm in length.
 
 ```{r plot4_LenghFreq, fig.cap="Length-frequency distribution of rainbow trout in Black Bear lake, July 2002."}
-rbt <- read.csv("D:/R/R_DAnalysis/RBTBBC02.csv")
 rbt_sub <- subset(rbt, Length_mm & Recapture == "n")
 p4 <- hist(rbt_sub$Length_mm, breaks = 40, 
      xlim = c(min(rbt_sub$Length_mm), max(rbt_sub$Length_mm)), 
@@ -182,9 +181,7 @@ box()
 
 
 ```{r plot5_ScatterPlot, fig.cap="Rainbow Trout Length (mm) and Weight (g)"} 
-rbt <- read.csv("D:/R/R_DAnalysis/RBTBBC02.csv")
-
-coolPlot1 <-function(rbt, Length_mm, Weight_g, RBT) {
+scatter <-function(rbt, Length_mm, Weight_g, RBT) {
   require(ggplot2)
   p <- ggplot(data = rbt, aes_string(x = Length_mm, y = Weight_g))
   p <- p + geom_point(color = "Darkgreen",na.rm = TRUE) 
@@ -200,11 +197,10 @@ coolPlot1(rbt, "Length_mm", "Weight_g", "Rainbow Trout")
 To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison.  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the adjusted $R^2$ for the regression was 0.97 (Figure 6, table 1).  Since the residuals plots (Figure 7) are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
 
 ```{r plot6_LM, fig.cap="Natural Log transformed length and  weight during July, 2002."}
-rbt <- read.csv("D:/R/R_DAnalysis/RBTBBC02.csv")
 rbt_sub <- subset(rbt, Length_mm > 60 & Recapture == "n")
 require(ggplot2) 
 # Regression of length on weight for all fish > 60 mm
-qplot(log(Length_mm), log(Weight_g), data=rbt_sub, geom=c("point", "smooth"), 
+linear <- qplot(log(Length_mm), log(Weight_g), data=rbt_sub, geom=c("point", "smooth"), 
       method="lm", formula=y~x,
       main="Regression of Weight on Length", 
       xlab="Ln Length (mm)", ylab="Ln Weight (g)")
@@ -224,11 +220,13 @@ par(mfrow=c(2,2))
 ```
 
 **Table 2.  Summary table for fish lenght in mm (top), and weight in grams (bottom).**
-```{r table2_summary, echo=FALSE}
+```{r table2_summary, eval=FALSE, echo=FALSE}
 # Summary Table of Fish Length (mm)
-summary(rbt$Length_mm)
+l <-na.omit(rbt$Length_mm)
+summary(l)
 # Summary Table of Fish Weight (g)
-summary(rbt$Weight_g)
+w <- na.omit(rbt$Weight_g)
+summary(w)
 ```
 
 #### *Population*
@@ -240,7 +238,6 @@ A two-sample Kolmogrov-Smirnov (KS) test <cite>(Zar 1996)</cite> was used to det
 Cumulative length-distribution plot for newly captured trout >= 180 mm FL during the second event (Figure 8) compared to newly captured trout during the first event revealed that fewer larger fish, and more smaller fish were caught during the recapture event.
 
 ```{r plot8_CumDist, fig.cap="Cumulative distribution of lenght of rainbow trout new capture enent 1, and new capture event 2." }
-rbt <- read.csv("D:/R/R_DAnalysis/RBTBBC02.csv")
 rbt <- subset(rbt, Length_mm > 60 & Recapture == "n")
 df <- data.frame(Length = rbt$Length_mm, Event = factor(rbt$CaptureEvent))
 df <- na.omit(df) 
@@ -275,7 +272,7 @@ The condition of most fish caught during this study were between 0.98 and 1.11 (
 
 ```{r plot9_FultonK, fig.cap="Fulton Conditon frequency histogram."}
 K <-  na.omit(rbt$FultonK)
-p1 <- hist(K, breaks = 100, 
+pK <- hist(K, breaks = 100, 
     xlim = c(min(K), max(K)), 
     freq = FALSE, 
     col = 'cornsilk3',

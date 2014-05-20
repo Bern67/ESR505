@@ -25,7 +25,7 @@ Black Bear Lake Hydro, Inc. (BBLH), a subsidiary of Alaska Power & Telephone Com
 
 Limited information from past studies is available to determine rainbow trout population age composition and abundance in Black Bear Lake during spring and summer periods when spawning habitat may be limited due to lake drawdown. Regulated flows and lake drawdown from the BBLH Project change the amount of available habitat during spawning, incubation, and rearing for rainbow trout. Based on lake-level data supplied by BBLH, trapping data from the 1997 population estimate study <cite>(Martin Environmental 1998)</cite>, and length-at-age data <cite>(Environaid 1982)</cite>, there appeared to be recruitment to the lake population even when the lake outlet was dewatered during spawning and incubation, but age analysis and spawning observations were cursory and incomplete. Further information was needed to determine age distribution and adult population status.
 
-![Map of Southeast Alaska, showing location of Black Bear Lake on Prince of Wales Island.](D:/R/ESR505/figure/plot1_SEAK.png) 
+![Map of Southeast Alaska, showing location of Black Bear Lake on Prince of Wales Island.](figure/plot1_SEAK.png) 
 
 
 ### Study Area
@@ -34,7 +34,7 @@ Black Bear Lake is a deep cirque lake located in steep mountainous terrain near 
 
 ![Black Bear Lake](D:/R/R_DAnalysis/bbl.jpg)
 
-![Black Bear Lake, Prince of Wales Island, SE Alaska.](D:/R/ESR505/figure/plot3_BBL.png) 
+![Black Bear Lake, Prince of Wales Island, SE Alaska.](figure/plot3_BBL.png) 
 
 
 ### Field Data Collection
@@ -121,16 +121,19 @@ The results were multiplied by 100,000 to provide an appropriate scaling to the 
 
 A length-frequency histogram of the fish-length data (Figure 4) shows the catch varied by age group. Few small (range 40 to 200 mm) and large (range 320 to 410 mm) fish were caught, but the catch of intermediate-size fish (range 200 to 310 mm) was high. Based on age analysis data from this population, these three length classes correspond to ages 1 through 3, ages 6 and 7, and ages 4 and 5, respectively. Therefore, the majority of the fish caught were between ages 4 and 5.  Very few age 1 fish were caught during this study (Figure 5). This was primarily due to the net mesh size on both the fike nets and hoop traps being too large to capture fish less than 80 mm in length.
 
-![Length-frequency distribution of rainbow trout in Black Bear lake, July 2002.](D:/R/ESR505/figure/plot4_LenghFreq.png) 
+![Length-frequency distribution of rainbow trout in Black Bear lake, July 2002.](figure/plot4_LenghFreq.png) 
 
 
 
-![Rainbow Trout Length (mm) and Weight (g)](D:/R/ESR505/figure/plot5_ScatterPlot.png) 
+
+```
+## Error: could not find function "coolPlot1"
+```
 
 
 To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison.  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the adjusted $R^2$ for the regression was 0.97 (Figure 6, table 1).  Since the residuals plots (Figure 7) are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
 
-![Natural Log transformed length and  weight during July, 2002.](D:/R/ESR505/figure/plot6_LM.png) 
+
 
 
 
@@ -159,20 +162,11 @@ To better understand the relationship between fish lenght and weight, we transor
 
 ___
 
-![Linear fit model residuals plots.](D:/R/ESR505/figure/plot7_Residuals1.png) ![Linear fit model residuals plots.](D:/R/ESR505/figure/plot7_Residuals2.png) ![Linear fit model residuals plots.](D:/R/ESR505/figure/plot7_Residuals3.png) ![Linear fit model residuals plots.](D:/R/ESR505/figure/plot7_Residuals4.png) 
+![Linear fit model residuals plots.](figure/plot7_Residuals1.png) ![Linear fit model residuals plots.](figure/plot7_Residuals2.png) ![Linear fit model residuals plots.](figure/plot7_Residuals3.png) ![Linear fit model residuals plots.](figure/plot7_Residuals4.png) 
 
 
 **Table 2.  Summary table for fish lenght in mm (top), and weight in grams (bottom).**
 
-```
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
-##      46     216     265     251     297     410     255
-```
-
-```
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
-##       3     110     195     191     265     595     255
-```
 
 
 #### *Population*
@@ -183,7 +177,7 @@ A two-sample Kolmogrov-Smirnov (KS) test <cite>(Zar 1996)</cite> was used to det
 
 Cumulative length-distribution plot for newly captured trout >= 180 mm FL during the second event (Figure 8) compared to newly captured trout during the first event revealed that fewer larger fish, and more smaller fish were caught during the recapture event.
 
-![Cumulative distribution of lenght of rainbow trout new capture enent 1, and new capture event 2.](D:/R/ESR505/figure/plot8_CumDist.png) 
+![Cumulative distribution of lenght of rainbow trout new capture enent 1, and new capture event 2.](figure/plot8_CumDist.png) 
 
 
 The hypothesis of equal probability of capture by area was rejected (P = 0.04), and so was the hypothesis that marked fractions were similar in each recovery stratum (P < 0.01). However, since partial mixing of marked fish between sampling areas did occur between sampling events, spatial data for the entire study area were pooled and the Chapman modification of the Petersen model was used to estimate abundance. Abundance of rainbow trout >= 180 mm FL in Black Bear Lake in July 2002 was estimated at 993 (SE = 59.57). The 95% confidence interval (CI) for the estimate was 876 to 1110.
@@ -210,7 +204,7 @@ A comparison of relative fish condition factor ($K$) indicated that condition ha
 
 The condition of most fish caught during this study were between 0.98 and 1.11 (Figure 9, Table 1), while the mean condition for the sampled population was 1.06.   Even though a comparison between years indicates improved condition, the relative condition of the fish compared to other healthy populations is poor. This is primarily a result of very little predation and limited food due to an oligotrophic isolated alpine cirque lake habitat.
 
-![Fulton Conditon frequency histogram.](D:/R/ESR505/figure/plot9_FultonK.png) 
+![Fulton Conditon frequency histogram.](figure/plot9_FultonK.png) 
 
 
 Timing of field observations should also be considered when comparing relative mean condition factors among years. Post-spawning fish weight for both males and females will decrease slightly. In past studies <cite>(Konopacky Environmental 1993b, 1995a, 1995b; Martin Environmental 1996, 1997, 1999)</cite>, fish were sampled during the last week of July, after the majority of spawning had ended. During this study, a large percentage of the fish were sampled during the first two weeks of July, while spawning was ongoing. Sampling in early July may be partially responsible for the second highest relative condition on record since 1993.
