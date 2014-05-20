@@ -25,7 +25,6 @@ Black Bear Lake Hydro, Inc. (BBLH), a subsidiary of Alaska Power & Telephone Com
 
 Limited information from past studies is available to determine rainbow trout population age composition and abundance in Black Bear Lake during spring and summer periods when spawning habitat may be limited due to lake drawdown. Regulated flows and lake drawdown from the BBLH Project change the amount of available habitat during spawning, incubation, and rearing for rainbow trout. Based on lake-level data supplied by BBLH, trapping data from the 1997 population estimate study <cite>(Martin Environmental 1998)</cite>, and length-at-age data <cite>(Environaid 1982)</cite>, there appeared to be recruitment to the lake population even when the lake outlet was dewatered during spawning and incubation, but age analysis and spawning observations were cursory and incomplete. Further information was needed to determine age distribution and adult population status.
 
-
 ![Map of Southeast Alaska, showing location of Black Bear Lake on Prince of Wales Island.](D:/R/ESR505/figure/plot1_SEAK.png) 
 
 
@@ -134,7 +133,6 @@ To better understand the relationship between fish lenght and weight, we transor
 ![Natural Log transformed length and  weight during July, 2002.](D:/R/ESR505/figure/plot6_LM.png) 
 
 
-___
 
 **Table 1.  Linear Model.**
 
@@ -159,7 +157,7 @@ ___
 ## F-statistic: 2.32e+04 on 1 and 651 DF,  p-value: <2e-16
 ```
 
-
+___
 
 ![Linear fit model residuals plots.](D:/R/ESR505/figure/plot7_Residuals1.png) ![Linear fit model residuals plots.](D:/R/ESR505/figure/plot7_Residuals2.png) ![Linear fit model residuals plots.](D:/R/ESR505/figure/plot7_Residuals3.png) ![Linear fit model residuals plots.](D:/R/ESR505/figure/plot7_Residuals4.png) 
 
@@ -210,7 +208,7 @@ A comparison of relative fish condition factor ($K$) indicated that condition ha
 ```
 
 
-The condition of most fish caught during this study were between 0.98 and 1.11 (Figure 9, Table 1), while the mean condition for the sampled population was 1.06.   Even though a comparison between years indicates improved condition, the relative condition of the fish compared to other healthy populations is in poor condition. This is primarily a result of very little predation and limited food due to an oligotrophic isolated alpine cirque lake habitat.
+The condition of most fish caught during this study were between 0.98 and 1.11 (Figure 9, Table 1), while the mean condition for the sampled population was 1.06.   Even though a comparison between years indicates improved condition, the relative condition of the fish compared to other healthy populations is poor. This is primarily a result of very little predation and limited food due to an oligotrophic isolated alpine cirque lake habitat.
 
 ![Fulton Conditon frequency histogram.](D:/R/ESR505/figure/plot9_FultonK.png) 
 
@@ -260,6 +258,7 @@ ___
 <cite>Seber, G. A. F. 1982. The estimation of animal abundance and related-parameters, second edition. Charles Griffin and Company, Limited. London.</cite>
 
 <cite>Zar, J. H. 1996. Biostatistical analysis. 3rd ed. Prentice Hall, Englewood Cliffs, New Jersey.</cite>
+
 
 
 

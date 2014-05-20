@@ -50,7 +50,6 @@ Black Bear Lake Hydro, Inc. (BBLH), a subsidiary of Alaska Power & Telephone Com
 
 Limited information from past studies is available to determine rainbow trout population age composition and abundance in Black Bear Lake during spring and summer periods when spawning habitat may be limited due to lake drawdown. Regulated flows and lake drawdown from the BBLH Project change the amount of available habitat during spawning, incubation, and rearing for rainbow trout. Based on lake-level data supplied by BBLH, trapping data from the 1997 population estimate study <cite>(Martin Environmental 1998)</cite>, and length-at-age data <cite>(Environaid 1982)</cite>, there appeared to be recruitment to the lake population even when the lake outlet was dewatered during spawning and incubation, but age analysis and spawning observations were cursory and incomplete. Further information was needed to determine age distribution and adult population status.
 
-
 ```{r plot1_SEAK, fig.cap="Map of Southeast Alaska, showing location of Black Bear Lake on Prince of Wales Island."}
 library(maps)
 library(mapdata)
@@ -211,14 +210,13 @@ qplot(log(Length_mm), log(Weight_g), data=rbt_sub, geom=c("point", "smooth"),
       xlab="Ln Length (mm)", ylab="Ln Weight (g)")
 ```
 
-___
 
 **Table 1.  Linear Model.**
 ```{r table1_LM, echo=FALSE, tidy=TRUE}
 lmfit <- lm(log(rbt_sub$Weight_g) ~ log(rbt_sub$Length_mm))
 summary(lmfit)
 ```
-
+___
 
 ```{r plot7_Residuals, fig.cap="Linear fit model residuals plots."}
 plot(lmfit)
@@ -273,7 +271,7 @@ K <-  na.omit(rbt$FultonK)
 summary(K)
 ```
 
-The condition of most fish caught during this study were between 0.98 and 1.11 (Figure 9, Table 1), while the mean condition for the sampled population was 1.06.   Even though a comparison between years indicates improved condition, the relative condition of the fish compared to other healthy populations is in poor condition. This is primarily a result of very little predation and limited food due to an oligotrophic isolated alpine cirque lake habitat.
+The condition of most fish caught during this study were between 0.98 and 1.11 (Figure 9, Table 1), while the mean condition for the sampled population was 1.06.   Even though a comparison between years indicates improved condition, the relative condition of the fish compared to other healthy populations is poor. This is primarily a result of very little predation and limited food due to an oligotrophic isolated alpine cirque lake habitat.
 
 ```{r plot9_FultonK, fig.cap="Fulton Conditon frequency histogram."}
 K <-  na.omit(rbt$FultonK)
@@ -337,7 +335,9 @@ ___
 ```{r pdf_file, include=FALSE}
 # The below code converts markdown file to pdf, or Word docx using the pander package.
 
-# require(pander)
-# Pandoc.convert(f="BBLreport.md", format="pdf", options="-s")
+require(pander)
+Pandoc.convert(f="BBLreport.md", format="pdf", options="-s")
+
 # Pandoc.convert(f="BBLreport.md", format="docx", options="-s")
 ```
+
