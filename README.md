@@ -4,7 +4,7 @@ ESR505
 PSU: Data Management in R
 
 
-- [x] dplyer package ([docs](https://github.com/Bern67/ESR505.git)), 
+- [x] dplyer package ([docs](https://github.com/hadley/dplyr)), 
 - [x] reshape2 package ([docs](http://cran.r-project.org/web/packages/reshape2/index.html))
 - [x] ggplot ([docs](http://ggplot2.org/))
   - [x] R colors ([docs](http://research.stowers-institute.org/efg/R/Color/Chart/index.htm))
