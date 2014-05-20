@@ -22,6 +22,7 @@ PSU: Data Management in R
   - [ ] 
 - [ ] ...?
 - [ ] End of term; drink a beer!
+
 ___
 The required R packages needed for these files to run properly are: reshape2, maps, mapdata, ggmap, ggplot2, & pander.
 The PDF option at the end of the .Rmd file requires the knitr package, and the instalation of Pandoc & MikTeX 2.9.
