@@ -8,7 +8,7 @@ PSU: Data Management in R
   - [x] ggplot ([docs](http://ggplot2.org/))
   - [ ] Writing an r package from scratch ([docs](http://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/))
   - [ ] Test and push final ESR505 project to Git
-  - [ ] Submit url to Brian
+  - [ ] Submit Git url to Brian
   - [ ] Start work on SEAK project
   - [ ] 
 - [ ] ...?
