@@ -9,7 +9,7 @@ PSU: Data Management in R
 - [x] ggplot ([docs](http://ggplot2.org/))
   - [x] R colors ([docs](http://research.stowers-institute.org/efg/R/Color/Chart/index.htm))
 
-- [ ] Refrence material on Brian's Git ([docs](https://github.com/bsteves/DataManagementClass))
+- [ ] Refrence material on Brian's Git repository ([docs](https://github.com/bsteves/DataManagementClass))
   
 - [x] Markdown ([docs](http://kbroman.github.io/knitr_knutshell/pages/Rmarkdown.html))
   - [x] knitr package ([docs](http://yihui.name/knitr/))
