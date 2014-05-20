@@ -32,7 +32,7 @@ Limited information from past studies is available to determine rainbow trout po
 
 Black Bear Lake is a deep cirque lake located in steep mountainous terrain near Klawock, Prince of Wales Island, Southeast Alaska (Figure 2, and 3). The lake is 2.4 km long and varies in width from 150 to 643 m. It has a surface area of 87 ha, a volume of 27.14 ha^3 and a maximum depth of 69 m. The shoreline consists primarily of steep bedrock and large boulder, although there are some gravels suitable for spawning near the lake outlet and other small areas around the shoreline. The outlet stream falls approximately 427 m over a distance of approximately 530 m to the lower valley floor and forms a source for Black Bear Creek <cite>(HDR Engineering 1991)</cite>, which drains into Black Lake. The USFWS stocked Black Bear Lake with rainbow trout from Washington State in 1956 to initiate a sport fishery.
 
-![Black Bear Lake](D:/R/R_DAnalysis/bbl.jpg)
+![Black Bear Lake](D:/R/ESR505/bbl.jpg)
 
 ![Black Bear Lake, Prince of Wales Island, SE Alaska.](figure/plot3_BBL.png) 
 
@@ -125,10 +125,7 @@ A length-frequency histogram of the fish-length data (Figure 4) shows the catch 
 
 
 
-
-```
-## Error: could not find function "coolPlot1"
-```
+![Rainbow Trout Length (mm) and Weight (g)](figure/plot5_ScatterPlot.png) 
 
 
 To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison.  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the adjusted $R^2$ for the regression was 0.97 (Figure 6, table 1).  Since the residuals plots (Figure 7) are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
@@ -146,18 +143,18 @@ To better understand the relationship between fish lenght and weight, we transor
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -0.9505 -0.0588 -0.0010  0.0588  1.1119 
+## -0.9361 -0.0653  0.0000  0.0610  1.0996 
 ## 
 ## Coefficients:
 ##                        Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)            -10.6363     0.1028    -104   <2e-16 ***
-## log(rbt_sub$Length_mm)   2.8479     0.0187     152   <2e-16 ***
+## (Intercept)            -10.2915     0.1002    -103   <2e-16 ***
+## log(rbt_sub$Length_mm)   2.7858     0.0183     153   <2e-16 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 0.144 on 651 degrees of freedom
+## Residual standard error: 0.152 on 655 degrees of freedom
 ## Multiple R-squared:  0.973,	Adjusted R-squared:  0.973 
-## F-statistic: 2.32e+04 on 1 and 651 DF,  p-value: <2e-16
+## F-statistic: 2.33e+04 on 1 and 655 DF,  p-value: <2e-16
 ```
 
 ___
