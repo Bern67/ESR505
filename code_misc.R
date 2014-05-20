@@ -1,5 +1,12 @@
 
-# code to save a file as pdf with border geometry
+# code to save a file as pdf, or word docx with border geometry
+knitsDoc <- function(name) {
+  library(knitr)
+  knit(paste0(name, ".Rmd"), encoding = "utf-8")
+  system(paste0("pandoc -o ", name, ".docx ", name, ".md"))
+}
+
+
 knitsPDF <- function(name) {
   library(knitr)
   knit(paste0(name, ".Rmd"), encoding = "utf-8")
@@ -7,7 +14,7 @@ knitsPDF <- function(name) {
 }
 
 
-# code for installing packages that are not already installed
+# convenience function to use instead of library which installs the package if it is missing, then requires it:
 usePackage <- function(p) {
   if (!is.element(p, installed.packages()[,1]))
     install.packages(p, dep = TRUE)
