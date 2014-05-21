@@ -1,3 +1,5 @@
+<br/>
+
 Abundance, Age, Size, and Lake-shore Spawning of Rainbow Trout at Black Bear Lake, Southeast Alaska
 ========================================================
 
@@ -165,14 +167,14 @@ The results were multiplied by 100,000 to provide an appropriate scaling to the 
 A length-frequency histogram of the fish-length data (Figure 4) shows the catch varied by age group. Few small (range 40 to 200 mm) and large (range 320 to 410 mm) fish were caught, but the catch of intermediate-size fish (range 200 to 310 mm) was high. Based on age analysis data from this population, these three length classes correspond to ages 1 through 3, ages 6 and 7, and ages 4 and 5, respectively. Therefore, the majority of the fish caught were between ages 4 and 5.  Very few age 1 fish were caught during this study (Figure 5). This was primarily due to the net mesh size on both the fike nets and hoop traps being too large to capture fish less than 80 mm in length.
 
 ```{r plot4_LenghFreq, fig.cap="Length-frequency distribution of rainbow trout in Black Bear lake, July 2002."}
-rbt_sub <- subset(rbt, Length_mm & Recapture == "n")
-p4 <- hist(rbt_sub$Length_mm, breaks = 40, 
-     xlim = c(min(rbt_sub$Length_mm), max(rbt_sub$Length_mm)), 
+rbt <- subset(rbt, Length_mm & Recapture == "n")
+p4 <- hist(rbt$Length_mm, breaks = 40, 
+     xlim = c(min(rbt$Length_mm), max(rbt$Length_mm)), 
      freq = FALSE, 
      col = 'lightblue',
      main = 'Trout Lenght Distribution',
      xlab = 'Length')
-lines(density(rbt_sub$Length_mm, bw=10), col = 'red', lwd = 2)
+lines(density(rbt$Length_mm, bw=10), col = 'red', lwd = 2)
 box()
 ```
 
@@ -181,8 +183,8 @@ box()
 scatter <-function(rbt, Length_mm, Weight_g, RBT) {
   require(ggplot2)
   p <- ggplot(data = rbt, aes_string(x = Length_mm, y = Weight_g))
-  p <- p + geom_point(color = "Darkgreen",na.rm = TRUE) 
-  p <- p + stat_smooth(color = "red", na.rm = TRUE)
+  p <- p + geom_point(color = "Darkgreen") 
+  p <- p + stat_smooth(color = "red")
   p <- p + xlab("Length (mm)")+ ylab("Weight (g)")
   p <- p + theme_bw()
   p <- p + labs (title = RBT)
@@ -196,33 +198,41 @@ To better understand the relationship between fish lenght and weight, we transor
 ```{r plot6_LM, fig.cap="Natural Log transformed length and  weight during July, 2002."}
 require(ggplot2) 
 # Regression of length on weight for all fish > 60 mm
+rbt_sub <- subset(rbt, Length_mm > 60 & Recapture == "n")
+
 linear <- qplot(log(Length_mm), log(Weight_g), data=rbt_sub, geom=c("point", "smooth"), 
       method="lm", formula=y~x,
       main="Regression of Weight on Length", 
       xlab="Ln Length (mm)", ylab="Ln Weight (g)")
 ```
 
+<br/>
 
 **Table 1.  Linear Model.**
 ```{r table1_LM, echo=FALSE, tidy=TRUE}
+
 lmfit <- lm(log(rbt_sub$Weight_g) ~ log(rbt_sub$Length_mm))
 summary(lmfit)
 ```
-___
+
+<br/>
 
 ```{r plot7_Residuals, fig.cap="Linear fit model residuals plots."}
 plot(lmfit)
 par(mfrow=c(2,2))
 ```
 
+<br/>
+
 **Table 2.  Summary table for fish lenght in mm (top), and weight in grams (bottom).**
-```{r table2_summary, eval=FALSE, echo=FALSE}
+```{r table2_summary, echo=FALSE}
 # Summary Table of Fish Length (mm)
-l <-na.omit(rbt$Length_mm)
-summary(l)
+length <-na.omit(rbt$Length_mm)
+summary(length)
+
 # Summary Table of Fish Weight (g)
-w <- na.omit(rbt$Weight_g)
-summary(w)
+weight <- na.omit(rbt$Weight_g)
+summary(weight)
 ```
 
 #### *Population*
@@ -234,14 +244,16 @@ A two-sample Kolmogrov-Smirnov (KS) test <cite>(Zar 1996)</cite> was used to det
 Cumulative length-distribution plot for newly captured trout >= 180 mm FL during the second event (Figure 8) compared to newly captured trout during the first event revealed that fewer larger fish, and more smaller fish were caught during the recapture event.
 
 ```{r plot8_CumDist, fig.cap="Cumulative distribution of lenght of rainbow trout new capture enent 1, and new capture event 2." }
-rbt <- subset(rbt, Length_mm > 60 & Recapture == "n")
-df <- data.frame(Length = rbt$Length_mm, Event = factor(rbt$CaptureEvent))
+rbt_180 <- subset(rbt, Length_mm > 180 & Recapture == "n")
+
+df <- data.frame(Length = rbt_180$Length_mm, Event = factor(rbt_180$CaptureEvent))
 df <- na.omit(df) 
 
-p <- ggplot(df, aes(Length, group=Event))
-p <- p +  stat_ecdf(aes(color=Event))
-p <-p+ labs(title ="Cum Length Dist", x="Length", y = "Cumulative Density")
-p
+p8 <- ggplot(df, aes(Length, group=Event))
+  p8 <- p8 +  stat_ecdf(aes(color=Event))
+  p8 <- p8 + labs(title ="Cum Length Dist", x="Length", y = "Cumulative Density")
+  p8 <- p8 + theme_bw()
+p8
 ```
 
 The hypothesis of equal probability of capture by area was rejected (P = 0.04), and so was the hypothesis that marked fractions were similar in each recovery stratum (P < 0.01). However, since partial mixing of marked fish between sampling areas did occur between sampling events, spatial data for the entire study area were pooled and the Chapman modification of the Petersen model was used to estimate abundance. Abundance of rainbow trout >= 180 mm FL in Black Bear Lake in July 2002 was estimated at `r round((N),0)` (SE = `r round((se), 2)`). The 95% confidence interval (CI) for the estimate was `r round((ci95l), 0)` to `r round((ci95u), 0)`.
@@ -258,13 +270,12 @@ The amount of time between emergence and the onset of winter leaves very little 
 
 A comparison of relative fish condition factor ($K$) indicated that condition had increased in 2002 compared to the previous 5 years and was the second highest during the 7 years of monitoring. Fish condition since hydroelectric operations began in 1996 has shown a steady increase. This suggests that food supply and environmental conditions are favorable for fish growth.
 
-**Table 3.  Summary table for Fulton Condition.**
-```{r table3_K, echo=FALSE}
+```{r K, include=FALSE}
 K <-  na.omit(rbt$FultonK)
 summary(K)
 ```
 
-The condition of most fish caught during this study were between 0.98 and 1.11 (Figure 9, Table 1), while the mean condition for the sampled population was 1.06.   Even though a comparison between years indicates improved condition, the relative condition of the fish compared to other healthy populations is poor. This is primarily a result of very little predation and limited food due to an oligotrophic isolated alpine cirque lake habitat.
+The condition of most fish caught during this study were between 0.98 and 1.11 (Figure 9), while the mean condition for the sampled population was 1.06.   Even though a comparison between years indicates improved condition, the relative condition of the fish compared to other healthy populations is poor. This is primarily a result of very little predation and limited food due to an oligotrophic isolated alpine cirque lake habitat.
 
 ```{r plot9_FultonK, fig.cap="Fulton Conditon frequency histogram."}
 K <-  na.omit(rbt$FultonK)
@@ -328,8 +339,8 @@ ___
 ```{r pdf_file, include=FALSE}
 # The below code converts markdown file to pdf, or Word docx using the pander package.
 
-# require(pander)
-# Pandoc.convert(f="BBLreport.md", format="pdf", options="-s")
+require(pander)
+Pandoc.convert(f="BBLreport.md", format="pdf", options="-s --toc -V geometry:margin=1in")
 
 # Pandoc.convert(f="BBLreport.md", format="docx", options="-s")
 ```

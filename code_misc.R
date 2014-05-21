@@ -20,3 +20,11 @@ usePackage <- function(p) {
     install.packages(p, dep = TRUE)
   require(p, character.only = TRUE)
 }
+
+# Creates PDF file from markdown file with specified margin.
+library(pander)
+Pandoc.convert(f="BBLreport.md", format="pdf", options="-s -V geometry:margin=1in")
+
+# Creates new dataframe and renames variables.
+df_lw <- data.frame(l_mm = factor(rbt$Length_mm),  w_g = factor(rbt$Weight_g))
+df_lw <-na.omit(df_lw)

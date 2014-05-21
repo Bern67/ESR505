@@ -1,3 +1,5 @@
+<br/>
+
 Abundance, Age, Size, and Lake-shore Spawning of Rainbow Trout at Black Bear Lake, Southeast Alaska
 ========================================================
 
@@ -133,6 +135,7 @@ To better understand the relationship between fish lenght and weight, we transor
 
 
 
+<br/>
 
 **Table 1.  Linear Model.**
 
@@ -143,27 +146,39 @@ To better understand the relationship between fish lenght and weight, we transor
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -0.9361 -0.0653  0.0000  0.0610  1.0996 
+## -0.9505 -0.0588 -0.0010  0.0588  1.1119 
 ## 
 ## Coefficients:
 ##                        Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)            -10.2915     0.1002    -103   <2e-16 ***
-## log(rbt_sub$Length_mm)   2.7858     0.0183     153   <2e-16 ***
+## (Intercept)            -10.6363     0.1028    -104   <2e-16 ***
+## log(rbt_sub$Length_mm)   2.8479     0.0187     152   <2e-16 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 0.152 on 655 degrees of freedom
+## Residual standard error: 0.144 on 651 degrees of freedom
 ## Multiple R-squared:  0.973,	Adjusted R-squared:  0.973 
-## F-statistic: 2.33e+04 on 1 and 655 DF,  p-value: <2e-16
+## F-statistic: 2.32e+04 on 1 and 651 DF,  p-value: <2e-16
 ```
 
-___
+
+<br/>
 
 ![Linear fit model residuals plots.](figure/plot7_Residuals1.png) ![Linear fit model residuals plots.](figure/plot7_Residuals2.png) ![Linear fit model residuals plots.](figure/plot7_Residuals3.png) ![Linear fit model residuals plots.](figure/plot7_Residuals4.png) 
 
 
+<br/>
+
 **Table 2.  Summary table for fish lenght in mm (top), and weight in grams (bottom).**
 
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##      46     216     265     251     297     410
+```
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##       3     110     195     191     265     595
+```
 
 
 #### *Population*
@@ -191,15 +206,10 @@ The amount of time between emergence and the onset of winter leaves very little 
 
 A comparison of relative fish condition factor ($K$) indicated that condition had increased in 2002 compared to the previous 5 years and was the second highest during the 7 years of monitoring. Fish condition since hydroelectric operations began in 1996 has shown a steady increase. This suggests that food supply and environmental conditions are favorable for fish growth.
 
-**Table 3.  Summary table for Fulton Condition.**
-
-```
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##    0.39    0.98    1.05    1.05    1.11    3.24
-```
 
 
-The condition of most fish caught during this study were between 0.98 and 1.11 (Figure 9, Table 1), while the mean condition for the sampled population was 1.06.   Even though a comparison between years indicates improved condition, the relative condition of the fish compared to other healthy populations is poor. This is primarily a result of very little predation and limited food due to an oligotrophic isolated alpine cirque lake habitat.
+
+The condition of most fish caught during this study were between 0.98 and 1.11 (Figure 9), while the mean condition for the sampled population was 1.06.   Even though a comparison between years indicates improved condition, the relative condition of the fish compared to other healthy populations is poor. This is primarily a result of very little predation and limited food due to an oligotrophic isolated alpine cirque lake habitat.
 
 ![Fulton Conditon frequency histogram.](figure/plot9_FultonK.png) 
 
