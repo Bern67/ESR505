@@ -28,5 +28,5 @@ The required R packages needed for these files to run properly are: reshape2, ma
 The PDF option at the end of the .Rmd file requires the knitr package, and the instalation of Pandoc & MikTeX 2.9.
 
 ___
-Contact Bern67 <h2o.bern@gmail.com> for questions regarding this repository, and data request.
+Contact Bern67 ([email](<h2o.bern@gmail.com>)) for questions regarding this repository, and data request.
 
