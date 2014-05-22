@@ -26,5 +26,12 @@ library(pander)
 Pandoc.convert(f="BBLreport.md", format="pdf", options="-s -V geometry:margin=1in")
 
 # Creates new dataframe and renames variables.
-df_lw <- data.frame(l_mm = factor(rbt$Length_mm),  w_g = factor(rbt$Weight_g))
-df_lw <-na.omit(df_lw)
+rbt <- read.csv("RBTBBC02.csv")
+df1 <- data.frame(lmm = factor(rbt$Length_mm),  wg = factor(rbt$Weight_g))
+df1 <-na.omit(df1)
+
+cor(df1$wg, df1$lmm)# Why is this not working?
+
+
+round(cor(df1$wg,df1$lmm),2)
+

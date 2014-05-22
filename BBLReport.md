@@ -1,7 +1,7 @@
 
-_ _ _
+\pagebreak
 
-Abundance, Age, Size, and Lake-shore Spawning of Rainbow Trout at Black Bear Lake, Southeast Alaska
+Abundance, Age, and Size of Rainbow Trout at Black Bear Lake, Southeast Alaska
 ========================================================
 
 ## *Summer 2002 Monitoring at the Black Bear Lake Hydroelectric Project, Near Klawock, Prince of Wales Island, Alaska*
@@ -22,6 +22,8 @@ This report summarizes results of population, age, size, and condition factor in
 Fyke-net traps and hoop traps were used to sample Black Bear Lake. Rainbow trout (Oncorhynchus mykiss) captured in the gear were marked to facilitate a mark-recapture experiment to estimate trout abundance. An estimated 993 (SE = 59.57) rainbow trout >= 180 mm FL were present in 2002.
 
 Fish condition factor and length-weight relationships were computed from fish captured by traps. Relative fish condition in 2002 was the second highest during the 7 years of monitoring. This suggests that food supply and other environmental factors are favorable for fish growth.
+
+\pagebreak
 
 ### Introduciton
 
@@ -132,12 +134,11 @@ A length-frequency histogram of the fish-length data (Figure 4) shows the catch 
 ![Rainbow Trout Length (mm) and Weight (g)](figure/plot4_ScatterPlot.png) 
 
 
-To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison.  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the adjusted $R^2$ for the regression was 0.97 (Figure 6, table 1).  Since the residuals plots (Figure 7) are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
 
 
 
+To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison.  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was 0.986.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
 
-![Cumulative distribution of lenght of rainbow trout new capture enent 1, and new capture event 2.](figure/plot6_CumDist.png) 
 
 
 
@@ -172,7 +173,7 @@ To better understand the relationship between fish lenght and weight, we transor
 ![Linear fit model residuals plots.](figure/plot7_Residuals1.png) ![Linear fit model residuals plots.](figure/plot7_Residuals2.png) ![Linear fit model residuals plots.](figure/plot7_Residuals3.png) ![Linear fit model residuals plots.](figure/plot7_Residuals4.png) 
 
 
-<br/>
+\pagebreak
 
 **Table 2.  Summary table for fish lenght in mm (top), and weight in grams (bottom).**
 
@@ -194,6 +195,9 @@ During the marking event a total of 477 rainbow trout between 180 and 410 mm FL 
 A two-sample Kolmogrov-Smirnov (KS) test <cite>(Zar 1996)</cite> was used to detect significant differences in the lengths of fish >= 180 mm FL caught during the different sampling events. The length-distributions of rainbow trout initially captured during the marking event and then recaptured during the recapture event (Figure 11, top panel) were not significantly different (KS test, Dmax = 0.0686, P = 0.82). Therefore, stratification based on fish size for the purpose of estimating population size was not required.
 
 Cumulative length-distribution plot for newly captured trout >= 180 mm FL during the second event (Figure 8) compared to newly captured trout during the first event revealed that fewer larger fish, and more smaller fish were caught during the recapture event.
+
+![Cumulative distribution of lenght of rainbow trout new capture enent 1, and new capture event 2.](figure/plot6_CumDist.png) 
+
 
 The hypothesis of equal probability of capture by area was rejected (P = 0.04), and so was the hypothesis that marked fractions were similar in each recovery stratum (P < 0.01). However, since partial mixing of marked fish between sampling areas did occur between sampling events, spatial data for the entire study area were pooled and the Chapman modification of the Petersen model was used to estimate abundance. Abundance of rainbow trout >= 180 mm FL in Black Bear Lake in July 2002 was estimated at 993 (SE = 59.57). The 95% confidence interval (CI) for the estimate was 876 to 1110.
 
@@ -229,7 +233,7 @@ Consequently, assumptions of the experiment were tested with reduced power and t
 
 In 2002, Black Bear Lake had the sixth largest (N = 993) rainbow trout population on record during the 7 years of monitoring. This is a conservative estimate since fish < 180 mm were not included in the estimate. From our observations it is felt that the true population value probably lies on the upper side of the population estimate, possibly in the region of 1,000 to 1,100 fish.
 
-____
+\pagebreak
 
 ### References
 

@@ -1,7 +1,7 @@
 
-_ _ _
+\pagebreak
 
-Abundance, Age, Size, and Lake-shore Spawning of Rainbow Trout at Black Bear Lake, Southeast Alaska
+Abundance, Age, and Size of Rainbow Trout at Black Bear Lake, Southeast Alaska
 ========================================================
 
 ## *Summer 2002 Monitoring at the Black Bear Lake Hydroelectric Project, Near Klawock, Prince of Wales Island, Alaska*
@@ -9,7 +9,7 @@ Abundance, Age, Size, and Lake-shore Spawning of Rainbow Trout at Black Bear Lak
 ### Date: May 2014
 
 ```{r global_options,include=FALSE}
-opts_chunk$set(fig.width=6, fig.height=5, fig.path='figure/',
+opts_chunk$set(fig.width=5, fig.height=4, fig.path='figure/',
          echo=FALSE, warning=FALSE, message=FALSE)
 ```
 ____
@@ -18,7 +18,7 @@ ____
 
 ```{r CPE,}
 rbt <- read.csv("RBTBBC02.csv")
- 
+
 library(reshape2)
 # Number of fish captured, and recapture in event 1 and 2.
 ce12 <- dcast(rbt, CaptureEvent ~  Recapture, length)
@@ -47,6 +47,8 @@ This report summarizes results of population, age, size, and condition factor in
 Fyke-net traps and hoop traps were used to sample Black Bear Lake. Rainbow trout (Oncorhynchus mykiss) captured in the gear were marked to facilitate a mark-recapture experiment to estimate trout abundance. An estimated `r round((N),0)` (SE = `r round((se), 2)`) rainbow trout >= 180 mm FL were present in 2002.
 
 Fish condition factor and length-weight relationships were computed from fish captured by traps. Relative fish condition in 2002 was the second highest during the 7 years of monitoring. This suggests that food supply and other environmental factors are favorable for fish growth.
+
+\pagebreak
 
 ### Introduciton
 
@@ -168,7 +170,7 @@ The results were multiplied by 100,000 to provide an appropriate scaling to the 
 
 A length-frequency histogram of the fish-length data (Figure 4) shows the catch varied by age group. Few small (range 40 to 200 mm) and large (range 320 to 410 mm) fish were caught, but the catch of intermediate-size fish (range 200 to 310 mm) was high. Based on age analysis data from this population, these three length classes correspond to ages 1 through 3, ages 6 and 7, and ages 4 and 5, respectively. Therefore, the majority of the fish caught were between ages 4 and 5.  Very few age 1 fish were caught during this study (Figure 5). This was primarily due to the net mesh size on both the fike nets and hoop traps being too large to capture fish less than 80 mm in length.
 
-```{r plot3_LenghFreq, fig.width=4.5, fig.height=4, fig.cap="Length-frequency distribution of rainbow trout in Black Bear lake, July 2002."}
+```{r plot3_LenghFreq, fig.cap="Length-frequency distribution of rainbow trout in Black Bear lake, July 2002."}
 rbt <- subset(rbt, Length_mm & Recapture == "n")
 p4 <- hist(rbt$Length_mm, breaks = 40, 
      xlim = c(min(rbt$Length_mm), max(rbt$Length_mm)), 
@@ -181,7 +183,8 @@ box()
 ```
 
 
-```{r plot4_ScatterPlot, fig.width=4.5, fig.height=4, fig.cap="Rainbow Trout Length (mm) and Weight (g)"} 
+```{r plot4_ScatterPlot, fig.cap="Rainbow Trout Length (mm) and Weight (g)"} 
+
 scatter <-function(rbt, Length_mm, Weight_g, RBT) {
   require(ggplot2)
   p <- ggplot(data = rbt, aes_string(x = Length_mm, y = Weight_g))
@@ -195,32 +198,21 @@ scatter <-function(rbt, Length_mm, Weight_g, RBT) {
 scatter(rbt, "Length_mm", "Weight_g", "Rainbow Trout")
 ```
 
-To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison.  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the adjusted $R^2$ for the regression was 0.97 (Figure 6, table 1).  Since the residuals plots (Figure 7) are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
+```{r subdata, echo=FALSE}
+rbt_sub <- subset(rbt, Length_mm > 60 & Recapture == "n")
+```
 
-```{r plot5_LM, fig.width=4.5, fig.height=4, fig.cap="Natural Log transformed length and  weight during July, 2002."}
+To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison.  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was `r round(cor(log(rbt_sub$Weight_g), log(rbt_sub$Length_mm)),3)`.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
+
+```{r plot5_LM, fig.cap="Natural Log transformed length and  weight during July, 2002."}
 require(ggplot2) 
 # Regression of length on weight for all fish > 60 mm
-rbt_sub <- subset(rbt, Length_mm > 60 & Recapture == "n")
 
 linear <- qplot(log(Length_mm), log(Weight_g), data=rbt_sub, geom=c("point", "smooth"), 
       method="lm", formula=y~x,
       main="Regression of Weight on Length", 
       xlab="Ln Length (mm)", ylab="Ln Weight (g)")
 ```
-
-```{r plot6_CumDist, fig.width=4.5, fig.height=4,fig.cap="Cumulative distribution of lenght of rainbow trout new capture enent 1, and new capture event 2." }
-rbt_180 <- subset(rbt, Length_mm > 180 & Recapture == "n")
-
-df <- data.frame(Length = rbt_180$Length_mm, Event = factor(rbt_180$CaptureEvent))
-df <- na.omit(df) 
-
-p8 <- ggplot(df, aes(Length, group=Event))
-  p8 <- p8 +  stat_ecdf(aes(color=Event))
-  p8 <- p8 + labs(title ="Cum Length Dist", x="Length", y = "Cumulative Density")
-  p8 <- p8 + theme_bw()
-p8
-```
-
 
 <br/>
 
@@ -238,7 +230,7 @@ par(mfrow=c(2,2))
 xlab="Weight~Length"
 ```
 
-<br/>
+\pagebreak
 
 **Table 2.  Summary table for fish lenght in mm (top), and weight in grams (bottom).**
 ```{r table2_summary, echo=FALSE}
@@ -258,6 +250,19 @@ During the marking event a total of 477 rainbow trout between 180 and 410 mm FL 
 A two-sample Kolmogrov-Smirnov (KS) test <cite>(Zar 1996)</cite> was used to detect significant differences in the lengths of fish >= 180 mm FL caught during the different sampling events. The length-distributions of rainbow trout initially captured during the marking event and then recaptured during the recapture event (Figure 11, top panel) were not significantly different (KS test, Dmax = 0.0686, P = 0.82). Therefore, stratification based on fish size for the purpose of estimating population size was not required.
 
 Cumulative length-distribution plot for newly captured trout >= 180 mm FL during the second event (Figure 8) compared to newly captured trout during the first event revealed that fewer larger fish, and more smaller fish were caught during the recapture event.
+
+```{r plot6_CumDist,fig.cap="Cumulative distribution of lenght of rainbow trout new capture enent 1, and new capture event 2." }
+rbt180 <- subset(rbt, Length_mm > 180 & Recapture == "n")
+
+df <- data.frame(Length = rbt180$Length_mm, Event = factor(rbt180$CaptureEvent))
+df <- na.omit(df) 
+
+p6 <- ggplot(df, aes(Length, group=Event,linetype=Event))
+  p6 <- p6 +  stat_ecdf(aes(color=Event))
+  p6 <- p6 + labs(title ="Cum Length Dist", x="Length", y = "Cumulative Density")
+  p6 <- p6 + theme_bw()
+p6
+```
 
 The hypothesis of equal probability of capture by area was rejected (P = 0.04), and so was the hypothesis that marked fractions were similar in each recovery stratum (P < 0.01). However, since partial mixing of marked fish between sampling areas did occur between sampling events, spatial data for the entire study area were pooled and the Chapman modification of the Petersen model was used to estimate abundance. Abundance of rainbow trout >= 180 mm FL in Black Bear Lake in July 2002 was estimated at `r round((N),0)` (SE = `r round((se), 2)`). The 95% confidence interval (CI) for the estimate was `r round((ci95l), 0)` to `r round((ci95u), 0)`.
 
@@ -304,7 +309,7 @@ Consequently, assumptions of the experiment were tested with reduced power and t
 
 In 2002, Black Bear Lake had the sixth largest (N = `r round((N), 0)`) rainbow trout population on record during the 7 years of monitoring. This is a conservative estimate since fish < 180 mm were not included in the estimate. From our observations it is felt that the true population value probably lies on the upper side of the population estimate, possibly in the region of 1,000 to 1,100 fish.
 
-____
+\pagebreak
 
 ### References
 
@@ -343,7 +348,7 @@ ____
 # The below code converts markdown file to pdf, or Word docx using the pander package.
 
 require(pander)
-Pandoc.convert(f="BBLreport.md", format="pdf", options="-s --toc -V geometry:margin=1in")
+Pandoc.convert(f="BBLreport.md", format="pdf", options="-s --toc -V geometry:margin=.75in")
 
 # Pandoc.convert(f="BBLreport.md", format="docx", options="-s")
 ```
