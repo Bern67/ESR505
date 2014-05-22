@@ -17,4 +17,7 @@ Weight_g <- rbt2 %.% arrange(CaptureEvent, GearType, Weight_g)
 
 mean_K <- rbt2 %.% group_by(CaptureEvent, CaptureLocation) %.% summarise(mean_k = mean(FultonK))
 
-
+# Log transform Length and weight data
+library(dplyr)
+logLW <- rbt %.% select(Length_mm, Weight_g)%.% mutate(Length_mm=log(Length_mm), Weight_g=log(Weight_g))
+logLW <- na.omit(logLW)

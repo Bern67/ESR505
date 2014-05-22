@@ -35,22 +35,13 @@ points(seakmap_lon, seakmap_lat, col = "yellow",bg="red", pch = 21, cex = 1.2)
 map.axes()
 box()
 
-# Create grid for inlay maps
-grid.newpage()
-vp_seak <- viewport(width = 1, height = 1, x = 0.5, y = 0.5) # the larger map
-vp_ak <- viewport(width = 0.3, height = 0.3, x = 0.6, y = 0.4) # the inset
-
-# plot the maps to each view point
-print(seakmap, vp = vp_seak)
-print(akmap, vp = vp_ak)
-
 
 # Close up map of POW SEAK
-bbl <- map("worldHires", "canada",
+pow <- map("worldHires", "canada",
            xlim=c(-134,-130), ylim=c(54.5, 56.5),
            col="gray90", fill=TRUE)
 
-bbl <- map("worldHires", "usa",
+pow <- map("worldHires", "usa",
            xlim=c(-134,-130), ylim=c(54.5, 56.5),
            col="tan", fill=TRUE, add=TRUE)
 
@@ -59,7 +50,7 @@ map.axes()
 
 bbl_lat <- 55.541175
 bbl_lon <- -132.855405
-points(bbl_lon, bbl_lat, col = "yellow",bg="red", pch = 21, cex = 1.7)
+points(bbl_lon, bbl_lat, col = "yellow",bg="red", pch = 19, cex = 1.7)
 box()
 
 
@@ -69,4 +60,33 @@ bbl <- get_map("Black Bear Lake, Prince of Wales-Outer Ketchikan, AK",zoom = 14)
 ggmap(bbl)
 
 
+# ______________________________________
+library(maps)
+library(mapdata)
 
+# Example of inset maps
+aa <- rep(1,5); ab <- c(2,3,1,1,1)
+mat <- rbind(aa,aa,aa,ab)
+layout(mat)
+map('state')
+par(mar=c(0,0,0,0))
+map('worldHires', region='USA:Alaska', xlim=c(-175,-120), col="blue")
+par(mar=c(0,0,0,0))
+map('worldHires', region='Hawaii', xlim=c(-161,-154.5), col="blue")
+
+#Alaska State Inset map
+aa <- rep(1,8); ab <- c(1,1,1,1,2,2,1,1)
+mat <- rbind(aa,ab,ab,aa,aa,aa,aa,aa)
+layout(mat)
+
+map('worldHires', region='USA:Alaska', xlim=c(-140,-129), 
+    col="darkgreen")
+bbl_lat <- 55.541175
+bbl_lon <- -132.855405
+points(bbl_lon, bbl_lat, col = "yellow",bg="red", pch = 21, cex = 2)
+map.scale(-139,61, ratio=FALSE, relwidth=0.3, cex=1.1)
+map.axes()
+
+par(mar=c(0,0,0,0))
+map('worldHires', region='USA:Alaska', xlim=c(-175,-125), col="black")
+#box()

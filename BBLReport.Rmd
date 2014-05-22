@@ -60,31 +60,29 @@ Limited information from past studies is available to determine rainbow trout po
 library(maps)
 library(mapdata)
 
-seAK <- map("worldHires", "canada",
-    xlim=c(-141,-129), ylim=c(54, 60),
-    col="gray90", fill=TRUE)
-seAK <- map("worldHires", "usa",
-    xlim=c(-141,-129), ylim=c(54, 60),
-    col="tan", fill=TRUE, add=TRUE)
-map.scale(-140.5,60, ratio=FALSE, relwidth=0.3, cex=1.0)
-seAK_lat <- 55.541175
-seAK_lon <- -132.855405
-points(seAK_lon, seAK_lat, col = "yellow",bg="red", pch = 21, cex = 1.2)
+aa <- rep(1,8); ab <- c(1,1,1,1,2,2,1,1)
+mat <- rbind(aa,ab,ab,aa,aa,aa,aa,aa)
+layout(mat)
+
+map('worldHires', region='USA:Alaska', xlim=c(-140,-129), 
+    col="darkgreen")
+bbl_lat <- 55.541175
+bbl_lon <- -132.855405
+points(bbl_lon, bbl_lat, col = "yellow",bg="red", pch = 21, cex = 2)
+map.scale(-139,61, ratio=FALSE, relwidth=0.3, cex=1.1)
 map.axes()
+
+par(mar=c(0,0,0,0))
+map('worldHires', region='USA:Alaska', xlim=c(-175,-125), col="black")
 box()
 ```
 
 ### Study Area
 
-Black Bear Lake is a deep cirque lake located in steep mountainous terrain near Klawock, Prince of Wales Island, Southeast Alaska (Figure 2, and 3). The lake is 2.4 km long and varies in width from 150 to 643 m. It has a surface area of 87 ha, a volume of 27.14 ha^3 and a maximum depth of 69 m. The shoreline consists primarily of steep bedrock and large boulder, although there are some gravels suitable for spawning near the lake outlet and other small areas around the shoreline. The outlet stream falls approximately 427 m over a distance of approximately 530 m to the lower valley floor and forms a source for Black Bear Creek <cite>(HDR Engineering 1991)</cite>, which drains into Black Lake. The USFWS stocked Black Bear Lake with rainbow trout from Washington State in 1956 to initiate a sport fishery.
+Black Bear Lake is a deep cirque lake located in steep mountainous terrain near Klawock, Prince of Wales Island, Southeast Alaska (Figure 1, and 2). The lake is 2.4 km long and varies in width from 150 to 643 m. It has a surface area of 87 ha, a volume of 27.14 ha^3 and a maximum depth of 69 m. The shoreline consists primarily of steep bedrock and large boulder, although there are some gravels suitable for spawning near the lake outlet and other small areas around the shoreline. The outlet stream falls approximately 427 m over a distance of approximately 530 m to the lower valley floor and forms a source for Black Bear Creek <cite>(HDR Engineering 1991)</cite>, which drains into Black Lake. The USFWS stocked Black Bear Lake with rainbow trout from Washington State in 1956 to initiate a sport fishery.
 
 ![Black Bear Lake](D:/R/ESR505/bbl.jpg)
 
-```{r plot2_BBL, fig.cap="Black Bear Lake, Prince of Wales Island, SE Alaska."}
-library(ggmap)
-bbl <- get_map("Black Bear Lake, Prince of Wales-Outer Ketchikan, AK",zoom = 14)
-ggmap(bbl)
-```
 
 ### Field Data Collection
 
@@ -168,7 +166,7 @@ The results were multiplied by 100,000 to provide an appropriate scaling to the 
 
 #### *Size and Age*
 
-A length-frequency histogram of the fish-length data (Figure 4) shows the catch varied by age group. Few small (range 40 to 200 mm) and large (range 320 to 410 mm) fish were caught, but the catch of intermediate-size fish (range 200 to 310 mm) was high. Based on age analysis data from this population, these three length classes correspond to ages 1 through 3, ages 6 and 7, and ages 4 and 5, respectively. Therefore, the majority of the fish caught were between ages 4 and 5.  Very few age 1 fish were caught during this study (Figure 5). This was primarily due to the net mesh size on both the fike nets and hoop traps being too large to capture fish less than 80 mm in length.
+A length-frequency histogram of the fish-length data (Figure 3) shows the catch varied by age group. Few small (range 40 to 200 mm) and large (range 320 to 410 mm) fish were caught, but the catch of intermediate-size fish (range 200 to 310 mm) was high. Based on age analysis data from this population, these three length classes correspond to ages 1 through 3, ages 6 and 7, and ages 4 and 5, respectively. Therefore, the majority of the fish caught were between ages 4 and 5.  Very few age 1 fish were caught during this study (Figure 4). This was primarily due to the net mesh size on both the fike nets and hoop traps being too large to capture fish less than 80 mm in length.
 
 ```{r plot3_LenghFreq, fig.cap="Length-frequency distribution of rainbow trout in Black Bear lake, July 2002."}
 rbt <- subset(rbt, Length_mm & Recapture == "n")
@@ -183,11 +181,14 @@ box()
 ```
 
 
-```{r plot4_ScatterPlot, fig.cap="Rainbow Trout Length (mm) and Weight (g)"} 
+```{r plot4_LogLW, fig.cap="Rainbow Trout Length (mm) and Weight (g)"} 
+library(dplyr)
+logLW <- rbt %.% select(Length_mm, Weight_g)%.% mutate(Length_mm=log(Length_mm), Weight_g=log(Weight_g))
+logLW <- na.omit(logLW)
 
-scatter <-function(rbt, Length_mm, Weight_g, RBT) {
+scatter <-function(logLW, Length_mm, Weight_g, RBT) {
   require(ggplot2)
-  p <- ggplot(data = rbt, aes_string(x = Length_mm, y = Weight_g))
+  p <- ggplot(data = logLW, aes_string(x = Length_mm, y = Weight_g))
   p <- p + geom_point(color = "Darkgreen") 
   p <- p + stat_smooth(color = "red")
   p <- p + xlab("Length (mm)")+ ylab("Weight (g)")
@@ -195,36 +196,28 @@ scatter <-function(rbt, Length_mm, Weight_g, RBT) {
   p <- p + labs (title = RBT)
   print(p)
 }
-scatter(rbt, "Length_mm", "Weight_g", "Rainbow Trout")
+scatter(logLW, "Length_mm", "Weight_g", "Rainbow Trout")
 ```
 
 ```{r subdata, echo=FALSE}
-rbt_sub <- subset(rbt, Length_mm > 60 & Recapture == "n")
+# Year 1 fish removed
+subLW <- subset(logLW, Length_mm > 4)
 ```
 
-To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison.  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was `r round(cor(log(rbt_sub$Weight_g), log(rbt_sub$Length_mm)),3)`.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
+To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison (Figure 5).  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was `r round(cor(subLW$Weight_g, subLW$Length_mm),3)`.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
 
-```{r plot5_LM, fig.cap="Natural Log transformed length and  weight during July, 2002."}
-require(ggplot2) 
-# Regression of length on weight for all fish > 60 mm
 
-linear <- qplot(log(Length_mm), log(Weight_g), data=rbt_sub, geom=c("point", "smooth"), 
-      method="lm", formula=y~x,
-      main="Regression of Weight on Length", 
-      xlab="Ln Length (mm)", ylab="Ln Weight (g)")
-```
-
-<br/>
+\pagebreak
 
 **Table 1.  Linear Model.**
 ```{r table1_LM, echo=FALSE, tidy=TRUE}
-lmfit <- lm(log(rbt_sub$Weight_g) ~ log(rbt_sub$Length_mm))
+lmfit <- lm(subLW$Weight_g ~ subLW$Length_mm)
 summary(lmfit)
 ```
 
 <br/>
 
-```{r plot7_Residuals, echo=FALSE, fig.width=3.5, fig.height=3, fig.cap="Linear fit model residuals plots."}
+```{r Residuals_Plots, echo=FALSE, fig.width=3.5, fig.height=3, fig.cap="Linear fit model residuals plots."}
 plot(lmfit)
 par(mfrow=c(2,2))
 xlab="Weight~Length"
@@ -249,7 +242,7 @@ During the marking event a total of 477 rainbow trout between 180 and 410 mm FL 
 
 A two-sample Kolmogrov-Smirnov (KS) test <cite>(Zar 1996)</cite> was used to detect significant differences in the lengths of fish >= 180 mm FL caught during the different sampling events. The length-distributions of rainbow trout initially captured during the marking event and then recaptured during the recapture event (Figure 11, top panel) were not significantly different (KS test, Dmax = 0.0686, P = 0.82). Therefore, stratification based on fish size for the purpose of estimating population size was not required.
 
-Cumulative length-distribution plot for newly captured trout >= 180 mm FL during the second event (Figure 8) compared to newly captured trout during the first event revealed that fewer larger fish, and more smaller fish were caught during the recapture event.
+Cumulative length-distribution plot for newly captured trout >= 180 mm FL during the second event (Figure 6) compared to newly captured trout during the first event revealed that fewer larger fish, and more smaller fish were caught during the recapture event.
 
 ```{r plot6_CumDist,fig.cap="Cumulative distribution of lenght of rainbow trout new capture enent 1, and new capture event 2." }
 rbt180 <- subset(rbt, Length_mm > 180 & Recapture == "n")

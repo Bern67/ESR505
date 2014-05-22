@@ -36,11 +36,9 @@ Limited information from past studies is available to determine rainbow trout po
 
 ### Study Area
 
-Black Bear Lake is a deep cirque lake located in steep mountainous terrain near Klawock, Prince of Wales Island, Southeast Alaska (Figure 2, and 3). The lake is 2.4 km long and varies in width from 150 to 643 m. It has a surface area of 87 ha, a volume of 27.14 ha^3 and a maximum depth of 69 m. The shoreline consists primarily of steep bedrock and large boulder, although there are some gravels suitable for spawning near the lake outlet and other small areas around the shoreline. The outlet stream falls approximately 427 m over a distance of approximately 530 m to the lower valley floor and forms a source for Black Bear Creek <cite>(HDR Engineering 1991)</cite>, which drains into Black Lake. The USFWS stocked Black Bear Lake with rainbow trout from Washington State in 1956 to initiate a sport fishery.
+Black Bear Lake is a deep cirque lake located in steep mountainous terrain near Klawock, Prince of Wales Island, Southeast Alaska (Figure 1, and 2). The lake is 2.4 km long and varies in width from 150 to 643 m. It has a surface area of 87 ha, a volume of 27.14 ha^3 and a maximum depth of 69 m. The shoreline consists primarily of steep bedrock and large boulder, although there are some gravels suitable for spawning near the lake outlet and other small areas around the shoreline. The outlet stream falls approximately 427 m over a distance of approximately 530 m to the lower valley floor and forms a source for Black Bear Creek <cite>(HDR Engineering 1991)</cite>, which drains into Black Lake. The USFWS stocked Black Bear Lake with rainbow trout from Washington State in 1956 to initiate a sport fishery.
 
 ![Black Bear Lake](D:/R/ESR505/bbl.jpg)
-
-![Black Bear Lake, Prince of Wales Island, SE Alaska.](figure/plot2_BBL.png) 
 
 
 ### Field Data Collection
@@ -125,40 +123,38 @@ The results were multiplied by 100,000 to provide an appropriate scaling to the 
 
 #### *Size and Age*
 
-A length-frequency histogram of the fish-length data (Figure 4) shows the catch varied by age group. Few small (range 40 to 200 mm) and large (range 320 to 410 mm) fish were caught, but the catch of intermediate-size fish (range 200 to 310 mm) was high. Based on age analysis data from this population, these three length classes correspond to ages 1 through 3, ages 6 and 7, and ages 4 and 5, respectively. Therefore, the majority of the fish caught were between ages 4 and 5.  Very few age 1 fish were caught during this study (Figure 5). This was primarily due to the net mesh size on both the fike nets and hoop traps being too large to capture fish less than 80 mm in length.
+A length-frequency histogram of the fish-length data (Figure 3) shows the catch varied by age group. Few small (range 40 to 200 mm) and large (range 320 to 410 mm) fish were caught, but the catch of intermediate-size fish (range 200 to 310 mm) was high. Based on age analysis data from this population, these three length classes correspond to ages 1 through 3, ages 6 and 7, and ages 4 and 5, respectively. Therefore, the majority of the fish caught were between ages 4 and 5.  Very few age 1 fish were caught during this study (Figure 4). This was primarily due to the net mesh size on both the fike nets and hoop traps being too large to capture fish less than 80 mm in length.
 
 ![Length-frequency distribution of rainbow trout in Black Bear lake, July 2002.](figure/plot3_LenghFreq.png) 
 
 
 
-![Rainbow Trout Length (mm) and Weight (g)](figure/plot4_ScatterPlot.png) 
+![Rainbow Trout Length (mm) and Weight (g)](figure/plot4_LogLW.png) 
 
 
 
 
 
-To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison.  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was 0.986.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
+To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison (Figure 5).  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was 0.986.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
 
 
-
-
-<br/>
+\pagebreak
 
 **Table 1.  Linear Model.**
 
 ```
 ## 
 ## Call:
-## lm(formula = log(rbt_sub$Weight_g) ~ log(rbt_sub$Length_mm))
+## lm(formula = subLW$Weight_g ~ subLW$Length_mm)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
 ## -0.9505 -0.0588 -0.0010  0.0588  1.1119 
 ## 
 ## Coefficients:
-##                        Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)            -10.6363     0.1028    -104   <2e-16 ***
-## log(rbt_sub$Length_mm)   2.8479     0.0187     152   <2e-16 ***
+##                 Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)     -10.6363     0.1028    -104   <2e-16 ***
+## subLW$Length_mm   2.8479     0.0187     152   <2e-16 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -170,7 +166,7 @@ To better understand the relationship between fish lenght and weight, we transor
 
 <br/>
 
-![Linear fit model residuals plots.](figure/plot7_Residuals1.png) ![Linear fit model residuals plots.](figure/plot7_Residuals2.png) ![Linear fit model residuals plots.](figure/plot7_Residuals3.png) ![Linear fit model residuals plots.](figure/plot7_Residuals4.png) 
+![Linear fit model residuals plots.](figure/Residuals_Plots1.png) ![Linear fit model residuals plots.](figure/Residuals_Plots2.png) ![Linear fit model residuals plots.](figure/Residuals_Plots3.png) ![Linear fit model residuals plots.](figure/Residuals_Plots4.png) 
 
 
 \pagebreak
@@ -194,7 +190,7 @@ During the marking event a total of 477 rainbow trout between 180 and 410 mm FL 
 
 A two-sample Kolmogrov-Smirnov (KS) test <cite>(Zar 1996)</cite> was used to detect significant differences in the lengths of fish >= 180 mm FL caught during the different sampling events. The length-distributions of rainbow trout initially captured during the marking event and then recaptured during the recapture event (Figure 11, top panel) were not significantly different (KS test, Dmax = 0.0686, P = 0.82). Therefore, stratification based on fish size for the purpose of estimating population size was not required.
 
-Cumulative length-distribution plot for newly captured trout >= 180 mm FL during the second event (Figure 8) compared to newly captured trout during the first event revealed that fewer larger fish, and more smaller fish were caught during the recapture event.
+Cumulative length-distribution plot for newly captured trout >= 180 mm FL during the second event (Figure 6) compared to newly captured trout during the first event revealed that fewer larger fish, and more smaller fish were caught during the recapture event.
 
 ![Cumulative distribution of lenght of rainbow trout new capture enent 1, and new capture event 2.](figure/plot6_CumDist.png) 
 
