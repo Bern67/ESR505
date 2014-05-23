@@ -1,4 +1,5 @@
 
+
 \pagebreak
 
 Abundance, Age, and Size of Rainbow Trout at Black Bear Lake, Southeast Alaska
@@ -37,6 +38,7 @@ Limited information from past studies is available to determine rainbow trout po
 ### Study Area
 
 Black Bear Lake is a deep cirque lake located in steep mountainous terrain near Klawock, Prince of Wales Island, Southeast Alaska (Figure 1, and 2). The lake is 2.4 km long and varies in width from 150 to 643 m. It has a surface area of 87 ha, a volume of 27.14 ha^3 and a maximum depth of 69 m. The shoreline consists primarily of steep bedrock and large boulder, although there are some gravels suitable for spawning near the lake outlet and other small areas around the shoreline. The outlet stream falls approximately 427 m over a distance of approximately 530 m to the lower valley floor and forms a source for Black Bear Creek <cite>(HDR Engineering 1991)</cite>, which drains into Black Lake. The USFWS stocked Black Bear Lake with rainbow trout from Washington State in 1956 to initiate a sport fishery.
+
 
 ![Black Bear Lake](D:/R/ESR505/bbl.jpg)
 
@@ -186,7 +188,7 @@ To better understand the relationship between fish lenght and weight, we transor
 
 #### *Population*
 
-During the marking event a total of 477 rainbow trout between 180 and 410 mm FL were marked and released alive. During the recapture event 296 rainbow trout between 46 and 409 mm FL were examined, of which 142 fish had been marked during the marking event. There was no tag loss detected during the experiment.
+During the marking event a total of 993 rainbow trout between 180 and 410 mm FL were marked and released alive. During the recapture event 296 rainbow trout between 46 and 409 mm FL were examined, of which 142 fish had been marked during the marking event. There was no tag loss detected during the experiment.
 
 A two-sample Kolmogrov-Smirnov (KS) test <cite>(Zar 1996)</cite> was used to detect significant differences in the lengths of fish >= 180 mm FL caught during the different sampling events. The length-distributions of rainbow trout initially captured during the marking event and then recaptured during the recapture event (Figure 11, top panel) were not significantly different (KS test, Dmax = 0.0686, P = 0.82). Therefore, stratification based on fish size for the purpose of estimating population size was not required.
 
@@ -212,7 +214,7 @@ A comparison of relative fish condition factor ($K$) indicated that condition ha
 
 
 
-The condition of most fish caught during this study were between 0.98 and 1.11 (Figure 7), while the mean condition for the sampled population was 1.06.   Even though a comparison between years indicates improved condition, the relative condition of the fish compared to other healthy populations is poor. This is primarily a result of very little predation and limited food due to an oligotrophic isolated alpine cirque lake habitat.
+The condition of most fish caught during this study were between 0.98 and 1.11 (Figure 7), while the mean condition for the sampled population was 1.05.   Even though a comparison between years indicates improved condition, the relative condition of the fish compared to other healthy populations is poor. This is primarily a result of very little predation and limited food due to an oligotrophic isolated alpine cirque lake habitat.
 
 ![Fulton Conditon frequency histogram.](figure/plot7_FultonK.png) 
 
