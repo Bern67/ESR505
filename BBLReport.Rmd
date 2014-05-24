@@ -69,7 +69,7 @@ map('worldHires', region='USA:Alaska', xlim=c(-140,-129),
     col="darkgreen")
 bbl_lat <- 55.541175
 bbl_lon <- -132.855405
-points(bbl_lon, bbl_lat, col = "yellow",bg="red", pch = 21, cex = 2)
+points(bbl_lon, bbl_lat, col = "red", pch = 8, cex = 1)
 map.scale(-139,61, ratio=FALSE, relwidth=0.3, cex=1.1)
 map.axes()
 
@@ -83,7 +83,7 @@ box()
 Black Bear Lake is a deep cirque lake located in steep mountainous terrain near Klawock, Prince of Wales Island, Southeast Alaska (Figure 1, and 2). The lake is 2.4 km long and varies in width from 150 to 643 m. It has a surface area of 87 ha, a volume of 27.14 ha^3 and a maximum depth of 69 m. The shoreline consists primarily of steep bedrock and large boulder, although there are some gravels suitable for spawning near the lake outlet and other small areas around the shoreline. The outlet stream falls approximately 427 m over a distance of approximately 530 m to the lower valley floor and forms a source for Black Bear Creek <cite>(HDR Engineering 1991)</cite>, which drains into Black Lake. The USFWS stocked Black Bear Lake with rainbow trout from Washington State in 1956 to initiate a sport fishery.
 
 
-![Black Bear Lake](D:/R/ESR505/bbl.jpg)
+![Black Bear Lake](D:/R/ESR505/bbl.jpg "Penstock Instalation in oultet")
 
 
 ### Field Data Collection
@@ -242,7 +242,7 @@ summary(weight)
 
 During the marking event a total of `r round((N),0)` rainbow trout between 180 and 410 mm FL were marked and released alive. During the recapture event `r c` rainbow trout between 46 and 409 mm FL were examined, of which `r r` fish had been marked during the marking event. There was no tag loss detected during the experiment.
 
-A two-sample Kolmogrov-Smirnov (KS) test <cite>(Zar 1996)</cite> was used to detect significant differences in the lengths of fish >= 180 mm FL caught during the different sampling events. The length-distributions of rainbow trout initially captured during the marking event and then recaptured during the recapture event (Figure 11, top panel) were not significantly different (KS test, Dmax = 0.0686, P = 0.82). Therefore, stratification based on fish size for the purpose of estimating population size was not required.
+A two-sample Kolmogrov-Smirnov (KS) test <cite>(Zar 1996)</cite> was used to detect significant differences in the lengths of fish >= 180 mm FL caught during the different sampling events. The length-distributions of rainbow trout initially captured during the marking event and then recaptured during the recapture event were not significantly different (KS test, Dmax = 0.0686, P = 0.82). Therefore, stratification based on fish size for the purpose of estimating population size was not required.
 
 Cumulative length-distribution plot for newly captured trout >= 180 mm FL during the second event (Figure 6) compared to newly captured trout during the first event revealed that fewer larger fish, and more smaller fish were caught during the recapture event.
 
@@ -340,10 +340,10 @@ In 2002, Black Bear Lake had the sixth largest (N = `r round((N), 0)`) rainbow t
 
 
 ```{r pdf_file, include=FALSE}
-# The below code converts markdown file to pdf, or Word docx using the pander package.
+# The Pandoc code below converts markdown file to pdf, or Word docx using the pander package.
 
-# require(pander)
-# Pandoc.convert(f="BBLreport.md", format="pdf", options="-s --toc -V geometry:margin=.75in")
+require(pander)
+Pandoc.convert(f="BBLreport.md", format="pdf", options="-s --toc -V geometry:margin=.75in")
 
 # Pandoc.convert(f="BBLreport.md", format="docx", options="-s")
 ```
