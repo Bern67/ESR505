@@ -2,11 +2,13 @@
 
 \pagebreak
 
-Abundance, Age, and Size of Rainbow Trout at Black Bear Lake, Southeast Alaska
+Abundance, Age, and Condition of Rainbow Trout at Black Bear Lake, Southeast Alaska
 ========================================================
 
 ## *Summer 2002 Monitoring at the Black Bear Lake Hydroelectric Project, Near Klawock, Prince of Wales Island, Alaska*
+
 ### Author: Bernard T Romey
+
 ### Date: May 2014
 
 
@@ -20,13 +22,13 @@ ____
 
 This report summarizes results of population, age, size, and condition factor investigations for rainbow trout conducted during July 2002 for use in the evaluation of the Black Bear Lake Hydroelectric Project, near Klawock, Alaska.
 
-Fyke-net traps and hoop traps were used to sample Black Bear Lake. Rainbow trout (Oncorhynchus mykiss) captured in the gear were marked to facilitate a mark-recapture experiment to estimate trout abundance. An estimated 993 (SE = 59.57) rainbow trout >= 180 mm FL were present in 2002.
+Fyke-net traps and hoop traps were used to sample Black Bear Lake. Rainbow trout (Oncorhynchus mykiss) captured in the gear were marked to facilitate a mark-recapture experiment to estimate trout abundance. An estimated 993 (SE = 59.57) rainbow trout r >= 180 mm FL were present in 2002.
 
-Fish condition factor and length-weight relationships were computed from fish captured by traps. Relative fish condition in 2002 was the second highest during the 7 years of monitoring. This suggests that food supply and other environmental factors are favorable for fish growth.
+Fish condition factor and length-weight relationships were computed from fish captured by fyke and hoop traps. Relative fish condition in 2002 was the second highest during the 7 years of monitoring. This suggests that food supply and other environmental factors are favorable for fish growth.
 
 \pagebreak
 
-### Introduciton
+### Introduction
 
 Black Bear Lake Hydro, Inc. (BBLH), a subsidiary of Alaska Power & Telephone Company (AP&T), presently operates a federally-licensed 4.5-megawatt hydroelectric project (Federal Energy Regulatory Commission [FERC] License No. 10440-001) that generates power for the cities of Craig and Klawock, and the majority of other smaller communities on Prince of Wales Island (Figure 1). This project transfers water from Black Bear Lake, via a siphon and buried/surface penstock, to a powerhouse located downstream along Black Bear Creek. Black Bear Lake provides a portion of the flow to Black Bear Creek via a lake outlet stream that goes sub-surface and then re-emerges, as an upwelling, a short distance downstream. The water surface level in Black Bear Lake fluctuates throughout the year in response to drawdown from power generation and to seasonal changes in runoff. The maximum drawdown allowed by the FERC license is 4.6 m (15 ft). Water levels in Black Bear Creek also fluctuate in response to the hydroelectric operation.
 
@@ -40,12 +42,12 @@ Limited information from past studies is available to determine rainbow trout po
 Black Bear Lake is a deep cirque lake located in steep mountainous terrain near Klawock, Prince of Wales Island, Southeast Alaska (Figure 1, and 2). The lake is 2.4 km long and varies in width from 150 to 643 m. It has a surface area of 87 ha, a volume of 27.14 ha^3 and a maximum depth of 69 m. The shoreline consists primarily of steep bedrock and large boulder, although there are some gravels suitable for spawning near the lake outlet and other small areas around the shoreline. The outlet stream falls approximately 427 m over a distance of approximately 530 m to the lower valley floor and forms a source for Black Bear Creek <cite>(HDR Engineering 1991)</cite>, which drains into Black Lake. The USFWS stocked Black Bear Lake with rainbow trout from Washington State in 1956 to initiate a sport fishery.
 
 
-![Black Bear Lake](D:/R/ESR505/bbl.jpg "Penstock Instalation in oultet")
+![Black Bear Lake](D:/R/ESR505/bbl.jpg "Penstock Instalation near oultet")
 
 
 ### Field Data Collection
 
-A two-event mark-recapture experiment was used to estimate the abundance, length, and age composition for rainbow trout in Black Bear Lake. The first sampling event (mark event) occurred from July 2 to July 12, 2002, and the second (capture event) occurred from July 24 to July 30, 2002.
+A two-event mark-recapture experiment was used to estimate the abundance, condition, and age composition for rainbow trout in Black Bear Lake. The first sampling event (mark event) occurred from July 2 to July 12, 2002, and the second (capture event) occurred from July 24 to July 30, 2002.
 
 All trout caught during the marking event were marked with an upper caudal fin-clip and all trout >= 180 mm fork length (FL) also had a numbered anchor tag attached. In each sample, all rainbow trout were measured to the nearest mm FL and weighed to the nearest gram.
 
@@ -137,7 +139,7 @@ A length-frequency histogram of the fish-length data (Figure 3) shows the catch 
 
 
 
-To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison (Figure 5).  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was 0.986.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
+To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison (Figure 5, Table 1).  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was 0.986.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
 
 
 \pagebreak
@@ -190,14 +192,16 @@ To better understand the relationship between fish lenght and weight, we transor
 
 During the marking event a total of 993 rainbow trout between 180 and 410 mm FL were marked and released alive. During the recapture event 296 rainbow trout between 46 and 409 mm FL were examined, of which 142 fish had been marked during the marking event. There was no tag loss detected during the experiment.
 
-A two-sample Kolmogrov-Smirnov (KS) test <cite>(Zar 1996)</cite> was used to detect significant differences in the lengths of fish >= 180 mm FL caught during the different sampling events. The length-distributions of rainbow trout initially captured during the marking event and then recaptured during the recapture event (Figure 11, top panel) were not significantly different (KS test, Dmax = 0.0686, P = 0.82). Therefore, stratification based on fish size for the purpose of estimating population size was not required.
+A two-sample Kolmogrov-Smirnov (KS) test <cite>(Zar 1996)</cite> was used to detect significant differences in the lengths of fish >= 180 mm FL caught during the different sampling events. The length-distributions of rainbow trout initially captured during the marking event and then recaptured during the recapture event were not significantly different (KS test, Dmax = 0.0686, P = 0.82). Therefore, stratification based on fish size for the purpose of estimating population size was not required.
 
 Cumulative length-distribution plot for newly captured trout >= 180 mm FL during the second event (Figure 6) compared to newly captured trout during the first event revealed that fewer larger fish, and more smaller fish were caught during the recapture event.
 
 ![Cumulative distribution of lenght of rainbow trout new capture enent 1, and new capture event 2.](figure/plot6_CumDist.png) 
 
 
-The hypothesis of equal probability of capture by area was rejected (P = 0.04), and so was the hypothesis that marked fractions were similar in each recovery stratum (P < 0.01). However, since partial mixing of marked fish between sampling areas did occur between sampling events, spatial data for the entire study area were pooled and the Chapman modification of the Petersen model was used to estimate abundance. Abundance of rainbow trout >= 180 mm FL in Black Bear Lake in July 2002 was estimated at 993 (SE = 59.57). The 95% confidence interval (CI) for the estimate was 876 to 1110.
+The hypothesis of equal probability of capture by area was rejected (P = 0.04), and so was the hypothesis that marked fractions were similar in each recovery stratum (P < 0.01). However, since partial mixing of marked fish between sampling areas did occur between sampling events, spatial data for the entire study area were pooled and the Chapman modification of the Petersen model was used to estimate abundance. 
+
+Abundance of rainbow trout >= 180 mm FL in Black Bear Lake in July 2002 was estimated at 993 (SE = 59.57). The 95% confidence interval (CI) for the estimate was 876 to 1110.
 
 ### Discussion
 
@@ -205,7 +209,7 @@ The hypothesis of equal probability of capture by area was rejected (P = 0.04), 
 
 <p>Age composition for 2002 suggests a strong age 5 component in the population. This information suggests that when the outlet stream was dewatered during 1997, there was still recruitment to the population from other areas of the lake for that brood year. Age 3 fish were less abundant than ages 2 and 4 fish, indicating that recruitment from the 1999 brood year was lower than from 1998 and 2000. Since the hydroelectric project operations began in 1996, the outlet stream has been dewatered on many occasions during the spawning period, yet recruitment for all brood years was present in the population. This indicates that during times of outlet stream dewatering, some recruitment comes primarily from beach spawning areas at lower lake depths.<p/>
 
-An estimate of fry emergence date was determined using the Accumulated Thermal Units (ATUs), or cumulative total of the daily temperatures, during the egg incubation period. We used July 2 as our starting date, since this was the first day we observed trout spawning in the outlet channel, and a completion date of July 28, when our last survey was conducted for new redds. Since we only had water temperature data for July, an average temperature of 9.0ºC for all observed spawning habitat areas was used as a rough estimate for ATUs. Thus, the majority of fry contributing to the population in the fall should have emerged by approximately September 26, 2002.
+An estimate of fry emergence date was determined using the Accumulated Thermal Units (ATU's), or cumulative total of the daily temperatures, during the egg incubation period. We used July 2 as our starting date, since this was the first day we observed trout spawning in the outlet channel, and a completion date of July 28, when our last survey was conducted for new redds. Since we only had water temperature data for July, an average temperature of 9.0ºC for all observed spawning habitat areas was used as a rough estimate for ATUs. Thus, the majority of fry contributing to the population in the fall should have emerged by approximately September 26, 2002.
 
 The amount of time between emergence and the onset of winter leaves very little time for these fry to grow. This was confirmed with catch data for age 1 fish (2001 cohort) having a mean length of 52 mm FL and no observed annulus during aging.
 
@@ -216,7 +220,7 @@ A comparison of relative fish condition factor ($K$) indicated that condition ha
 
 The condition of most fish caught during this study were between 0.98 and 1.11 (Figure 7), while the mean condition for the sampled population was 1.05.   Even though a comparison between years indicates improved condition, the relative condition of the fish compared to other healthy populations is poor. This is primarily a result of very little predation and limited food due to an oligotrophic isolated alpine cirque lake habitat.
 
-![Fulton Conditon frequency histogram.](figure/plot7_FultonK.png) 
+![Fulton Conditon frequency histogram up to 2.0.](figure/plot7_FultonK.png) 
 
 
 Timing of field observations should also be considered when comparing relative mean condition factors among years. Post-spawning fish weight for both males and females will decrease slightly. In past studies <cite>(Konopacky Environmental 1993b, 1995a, 1995b; Martin Environmental 1996, 1997, 1999)</cite>, fish were sampled during the last week of July, after the majority of spawning had ended. During this study, a large percentage of the fish were sampled during the first two weeks of July, while spawning was ongoing. Sampling in early July may be partially responsible for the second highest relative condition on record since 1993.
