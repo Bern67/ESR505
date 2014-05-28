@@ -1,7 +1,7 @@
 ESR505
 ======
 
-PSU: Data Management in R
+PSU: Data Management with R
 
 
 - [x] dplyer package ([docs](https://github.com/hadley/dplyr)), 
