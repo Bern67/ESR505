@@ -30,8 +30,7 @@ rbt <- read.csv("RBTBBC02.csv")
 df1 <- data.frame(lmm = factor(rbt$Length_mm),  wg = factor(rbt$Weight_g))
 df1 <-na.omit(df1)
 
-cor(df1$wg, df1$lmm)# Why is this not working?
-
 
 round(cor(df1$wg,df1$lmm),2)
+
 

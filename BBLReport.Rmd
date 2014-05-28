@@ -1,5 +1,4 @@
 
-
 \pagebreak
 
 Abundance, Age, and Condition of Rainbow Trout at Black Bear Lake, Southeast Alaska
@@ -48,6 +47,8 @@ ci95l <- N-1.962*(se)
 This report summarizes results of population, age, size, and condition factor investigations for rainbow trout conducted during July 2002 for use in the evaluation of the Black Bear Lake Hydroelectric Project, near Klawock, Alaska.
 
 Fyke-net traps and hoop traps were used to sample Black Bear Lake. Rainbow trout (Oncorhynchus mykiss) captured in the gear were marked to facilitate a mark-recapture experiment to estimate trout abundance. An estimated `r round((N),0)` (SE = `r round((se), 2)`) rainbow trout r >= 180 mm FL were present in 2002.
+
+Based on age analysis information <cite>(Romey 2002)</cite>, age 5 (1997 brood year) was the most abundant year class. Most trout sampled in Black Bear Lake in 2002 were age 4 or 5. The low abundance of age 3 fish was indicative of poor recruitment from the 1999 brood year. 
 
 Fish condition factor and length-weight relationships were computed from fish captured by fyke and hoop traps. Relative fish condition in 2002 was the second highest during the 7 years of monitoring. This suggests that food supply and other environmental factors are favorable for fish growth.
 
@@ -337,7 +338,7 @@ In 2002, Black Bear Lake had the sixth largest (N = `r round((N), 0)`) rainbow t
 
 <cite>Martin Environmental. 1999. Rainbow trout population in Black Bear Lake, results from the sixth year (1998) of monitoring at the Black Bear Lake Hydroelectric Project, Near Klawock, Prince of Wales Island, Alaska. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
 
-<cite>Romey, B.T. (2002) Age analysis of Rainbow Trout in Black Bear Lake, SE Alaska during Summer fied sampling in 2002.</cite>
+<cite>Romey, B.T. (2002) Abundacnce, Age, Size, and Lake-shore Spawning of Rainbow Trout at Black Bear Lake, Southeast Alaska. Report to Black Bear Lake Hydro, Inc., for Summer 2002 Monitoring at the Black Bear Lake Hydroelectric Project, Near Klawock, Prince of Wales island, Alaska.</cite>
 
 <cite>Seber, G. A. F. 1982. The estimation of animal abundance and related-parameters, second edition. Charles Griffin and Company, Limited. London.</cite>
 
@@ -347,8 +348,8 @@ In 2002, Black Bear Lake had the sixth largest (N = `r round((N), 0)`) rainbow t
 ```{r pdf_file, include=FALSE}
 # The Pandoc code below converts markdown file to pdf, or Word docx using the pander package.
 
-require(pander)
-Pandoc.convert(f="BBLreport.md", format="pdf", options="-s --toc -V geometry:margin=.75in")
+# require(pander)
+# Pandoc.convert(f="BBLreport.md", format="pdf", options="-s --toc -V geometry:margin=.75in")
 
 # Pandoc.convert(f="BBLreport.md", format="docx", options="-s")
 ```
