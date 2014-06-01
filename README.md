@@ -1,7 +1,6 @@
 ESR505
 ======
 *PSU: Data Management with R*
-
 This repository is primarily for reference purposes regarding data management and reproducable research.
 
 - [x] dplyer package ([docs](https://github.com/hadley/dplyr)), 
