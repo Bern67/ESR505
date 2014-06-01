@@ -75,10 +75,9 @@ par(mar=c(0,0,0,0))
 map('worldHires', region='Hawaii', xlim=c(-161,-154.5), col="blue")
 
 #Alaska State Inset map
-aa <- rep(1,8); ab <- c(1,1,1,1,2,2,1,1)
+aa <- rep(1,8); ab <- c(1,1,1,1,2,2,2,1)
 mat <- rbind(aa,ab,ab,aa,aa,aa,aa,aa)
 layout(mat)
-
 map('worldHires', region='USA:Alaska', xlim=c(-140,-129), 
     col="darkgreen")
 bbl_lat <- 55.541175

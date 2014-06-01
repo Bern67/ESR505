@@ -240,35 +240,35 @@ In 2002, Black Bear Lake had the sixth largest (N = 993) rainbow trout populatio
 
 ### References
 
-<cite>Anderson, R. O., and S. J. Gutreuter. 1983. Length, weight, and associated structural indices. In: L.A. Nielsen, D. L. Johnson, and S. S. Lampton (eds). Fisheries Techniques. American Fisheries Society, Bethesda, Maryland.</cite>
+<cite>Anderson, R. O., and S. J. Gutreuter. 1983.  Length, weight, and associated structural indices. In: L.A. Nielsen, D. L. Johnson, and S. S. Lampton (eds). Fisheries Techniques. American Fisheries Society, Bethesda, Maryland.</cite>
 
-<cite>Dowdey, S., and S. Wearden. 1991. Statistics for research. 2nd ed. John Wiley & Sons, New York.</cite>
+<cite>Dowdey, S., and S. Wearden. 1991.  Statistics for research. 2nd ed. John Wiley & Sons, New York.</cite>
 
-<cite>Environaid. 1982. Late-summer and fall observations in upper Black Bear Creek and Black Bear Lake.</cite>
+<cite>Environaid. 1982.  Late-summer and fall observations in upper Black Bear Creek and Black Bear Lake.</cite>
 
-<cite>Fulton, T. (1902) Rate of growth of seas fishes.  Sci. Invert. Fish. Div. Scot. Rept. 20.</cite>
+<cite>Fulton, T. 1902. Rate of growth of seas fishes.  Sci. Invert. Fish. Div. Scot. Rept. 20.</cite>
 
-<cite>Konopacky Environmental. 1993a. Proposed plans for Black Bear Lake rainbow trout population, bald eagle nest tree, and spotted frog presence-absence studies associated with the proposed Black Bear Lake Hydroelectric Project near Klawock, Prince of Wales Island, Southeast Alaska. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
+<cite>Konopacky Environmental. 1993a.  Proposed plans for Black Bear Lake rainbow trout population, bald eagle nest tree, and spotted frog presence-absence studies associated with the proposed Black Bear Lake Hydroelectric Project near Klawock, Prince of Wales Island, Southeast Alaska. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
 
-<cite>Konopacky Environmental. 1993b. Rainbow trout population, bald eagle nest tree, and spotted frog presence-absence studies associated with the proposed Black Bear Lake Hydroelectric Project near Klawock, Prince of Wales Island, Southeast Alaska. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
+<cite>Konopacky Environmental. 1993b.  Rainbow trout population, bald eagle nest tree, and spotted frog presence-absence studies associated with the proposed Black Bear Lake Hydroelectric Project near Klawock, Prince of Wales Island, Southeast Alaska. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
 
-<cite>Konopacky Environmental. 1995a. Second year of a five-year study of the rainbow trout population in Black Bear Lake, conducted in association with the FERC-licensed Black Bear Lake Hydroelectric Project near Klawock, Prince of Wales Island, Alaska, during 1994. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
+<cite>Konopacky Environmental. 1995a.  Second year of a five-year study of the rainbow trout population in Black Bear Lake, conducted in association with the FERC-licensed Black Bear Lake Hydroelectric Project near Klawock, Prince of Wales Island, Alaska, during 1994. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
 
-<cite>Konopacky Environmental. 1995b. Third year (1995) of a five-year study of the rainbow trout population in Black Bear Lake, conducted in association with the FERC-licensed Black Bear Lake Hydroelectric Project, near Klawock, Prince of Wales Island, Alaska. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
+<cite>Konopacky Environmental. 1995b.  Third year (1995) of a five-year study of the rainbow trout population in Black Bear Lake, conducted in association with the FERC-licensed Black Bear Lake Hydroelectric Project, near Klawock, Prince of Wales Island, Alaska. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
 
-<cite>Martin Environmental. 1996. Fourth year (1996) of a five-year study of the rainbow trout population in Black Bear Lake, conducted in association with the FERC-licensed Black Bear Lake Hydroelectric Project near Klawock, Prince of Wales Island, Alaska. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
+<cite>Martin Environmental. 1996.  Fourth year (1996) of a five-year study of the rainbow trout population in Black Bear Lake, conducted in association with the FERC-licensed Black Bear Lake Hydroelectric Project near Klawock, Prince of Wales Island, Alaska. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
 
-<cite>Martin Environmental. 1997. Fifth year (1997) of a five-year study of the rainbow trout population in Black Bear Lake, conducted in association with the FERC-licensed Black Bear Lake Hydroelectric Project near Klawock, Prince of Wales Island, Alaska. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
+<cite>Martin Environmental. 1997.  Fifth year (1997) of a five-year study of the rainbow trout population in Black Bear Lake, conducted in association with the FERC-licensed Black Bear Lake Hydroelectric Project near Klawock, Prince of Wales Island, Alaska. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
 
-<cite>Martin Environmental. 1998. An assessment of a five-year (1993-1997) monitoring study of the rainbow trout population in Black Bear Lake, conducted in association with the FERC-licensed Black Bear Lake Hydroelectric Project near Klawock, Prince of Wales Island, Alaska. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
+<cite>Martin Environmental. 1998.  An assessment of a five-year (1993-1997) monitoring study of the rainbow trout population in Black Bear Lake, conducted in association with the FERC-licensed Black Bear Lake Hydroelectric Project near Klawock, Prince of Wales Island, Alaska. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
 
 <cite>Martin Environmental. 1999. Rainbow trout population in Black Bear Lake, results from the sixth year (1998) of monitoring at the Black Bear Lake Hydroelectric Project, Near Klawock, Prince of Wales Island, Alaska. Submitted to Alaska Power & Telephone, Port Townsend, Washington.</cite>
 
-<cite>Romey, B.T. (2002) Abundacnce, Age, Size, and Lake-shore Spawning of Rainbow Trout at Black Bear Lake, Southeast Alaska. Report to Black Bear Lake Hydro, Inc., for Summer 2002 Monitoring at the Black Bear Lake Hydroelectric Project, Near Klawock, Prince of Wales island, Alaska.</cite>
+<cite>Romey, B.T. 2002.  Abundacnce, Age, Size, and Lake-shore Spawning of Rainbow Trout at Black Bear Lake, Southeast Alaska. Report to Black Bear Lake Hydro, Inc., for Summer 2002 Monitoring at the Black Bear Lake Hydroelectric Project, Near Klawock, Prince of Wales island, Alaska.</cite>
 
-<cite>Seber, G. A. F. 1982. The estimation of animal abundance and related-parameters, second edition. Charles Griffin and Company, Limited. London.</cite>
+<cite>Seber, G. A. F. 1982.  The estimation of animal abundance and related-parameters, second edition. Charles Griffin and Company, Limited. London.</cite>
 
-<cite>Zar, J. H. 1996. Biostatistical analysis. 3rd ed. Prentice Hall, Englewood Cliffs, New Jersey.</cite>
+<cite>Zar, J. H. 1996.  Biostatistical analysis. 3rd ed. Prentice Hall, Englewood Cliffs, New Jersey.</cite>
 
 
 
