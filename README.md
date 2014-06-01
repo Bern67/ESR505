@@ -19,7 +19,7 @@ This repository is primarily for reference purposes regarding data management an
   - [ ] Test and push final ESR505 project to Git
   - [x] Submit Git url to Brian
 
-- [ ] term; drink a beer!
+- [ ] End of term; drink a beer!
 
 ___
 The required R packages needed for the markdown files to run properly are: reshape2, dplyr, maps, mapdata, ggplot2, & pander.
