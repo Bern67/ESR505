@@ -1,8 +1,7 @@
 ESR505
 ======
-
 PSU: Data Management with R
-
+This repository is primarily for reference purposes regarding data management and reproducable research.
 
 - [x] dplyer package ([docs](https://github.com/hadley/dplyr)), 
 - [x] reshape2 package ([docs](http://cran.r-project.org/web/packages/reshape2/index.html))
@@ -18,15 +17,13 @@ PSU: Data Management with R
   - [ ] Writing an r package from scratch ([docs](http://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/))
   - [ ] Test and push final ESR505 project to Git
   - [x] Submit Git url to Brian
-  - [ ] Start work on SEAK project
-  - [ ] 
-- [ ] ...?
-- [ ] End of term; drink a beer!
+
+- [ ] term; drink a beer!
 
 ___
-The required R packages needed for these files to run properly are: reshape2, dplyr, maps, mapdata, ggplot2, & pander.
+The required R packages needed for the markdown files to run properly are: reshape2, dplyr, maps, mapdata, ggplot2, & pander.
 The PDF option at the end of the .Rmd file requires the knitr package, and the instalation of Pandoc & MikTeX 2.9.
 
 ___
-Contact ([Bern67](<h2o.bern@gmail.com>)) for questions regarding this repository, and data request.
+Contact ([Bern67](<h2o.bern@gmail.com>)) for questions regarding this repository, or data request.
 
