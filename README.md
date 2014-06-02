@@ -23,7 +23,7 @@ This repository is primarily for reference purposes regarding data management an
 
 ___
 The required R packages needed for the markdown files to run properly are: reshape2, dplyr, maps, mapdata, ggplot2, & pander.
-The PDF option at the end of the .Rmd file requires the knitr package, and the installation of Pandoc & MikTeX 2.9.
+The PDF option at the end of the .Rmd file requires the knitr package, and the installation of Pandoc ([link](https://github.com/jgm/pandoc/releases)) & MikTeX ([link](http://miktex.org/)).
 
 ___
 Contact ([Bern67](<h2o.bern@gmail.com>)) for questions regarding this repository, or data request.

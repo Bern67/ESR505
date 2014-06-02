@@ -43,7 +43,11 @@ Limited information from past studies is available to determine rainbow trout po
 Black Bear Lake is a deep cirque lake located in steep mountainous terrain near Klawock, Prince of Wales Island, Southeast Alaska (Figure 1, and 2). The lake is 2.4 km long and varies in width from 150 to 643 m. It has a surface area of 87 ha, a volume of 27.14 ha^3 and a maximum depth of 69 m. The shoreline consists primarily of steep bedrock and large boulder, although there are some gravels suitable for spawning near the lake outlet and other small areas around the shoreline. The outlet stream falls approximately 427 m over a distance of approximately 530 m to the lower valley floor and forms a source for Black Bear Creek <cite>(HDR Engineering 1991)</cite>, which drains into Black Lake. The USFWS stocked Black Bear Lake with rainbow trout from Washington State in 1956 to initiate a sport fishery.
 
 
+<<<<<<< HEAD
 ![Black Bear Lake](bbl.jpg "Penstock Instalation near oultet")
+=======
+![Black Bear Lake](bbl.jpg "Hydro Penstock Instalation Near oultet")
+>>>>>>> 3e5bf510e25966052cee47d31945d73fc56354ca
 
 
 ### Field Data Collection
