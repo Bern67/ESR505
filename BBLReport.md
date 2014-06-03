@@ -42,13 +42,7 @@ Limited information from past studies is available to determine rainbow trout po
 
 Black Bear Lake is a deep cirque lake located in steep mountainous terrain near Klawock, Prince of Wales Island, Southeast Alaska (Figure 1, and 2). The lake is 2.4 km long and varies in width from 150 to 643 m. It has a surface area of 87 ha, a volume of 27.14 ha^3 and a maximum depth of 69 m. The shoreline consists primarily of steep bedrock and large boulder, although there are some gravels suitable for spawning near the lake outlet and other small areas around the shoreline. The outlet stream falls approximately 427 m over a distance of approximately 530 m to the lower valley floor and forms a source for Black Bear Creek <cite>(HDR Engineering 1991)</cite>, which drains into Black Lake. The USFWS stocked Black Bear Lake with rainbow trout from Washington State in 1956 to initiate a sport fishery.
 
-
-<<<<<<< HEAD
 ![Black Bear Lake](bbl.jpg "Penstock Instalation near oultet")
-=======
-![Black Bear Lake](bbl.jpg "Hydro Penstock Instalation Near oultet")
->>>>>>> 3e5bf510e25966052cee47d31945d73fc56354ca
-
 
 ### Field Data Collection
 
@@ -117,14 +111,23 @@ Where:
 
 For salmonids, $K$ values usually fall in the range of 0.8 to 2.0.
 
-$K$ value | Comments
---- | ---
-1.60  | *Excellent condition*
-1.40  | *Good condition*
-1.20  | *Fair condition*
-1.00  | *Poor condition*
-0.80  | *Extremely poor condition*
+\pagebreak
 
+Table 1.  Fulton Condition Factor for Salmonids.
+
++-----------+-----------------------------+
+| $K$ value | Comments                    |
++===========+=============================+
+| 1.60      | *Excellent condition*       |
++-----------+-----------------------------+
+| 1.40      | *Good condition*            |
++-----------+-----------------------------+
+| 1.20      | *Fair condition*            |
++-----------+-----------------------------+
+| 1.00      | *Poor condition*            |
++-----------+-----------------------------+
+| 0.80      | *Extremely poor condition*  |
++-----------+-----------------------------+
 
 The results were multiplied by 100,000 to provide an appropriate scaling to the values <cite>(Anderson and Gutreuter 1983)</cite>.
 
@@ -138,59 +141,33 @@ A length-frequency histogram of the fish-length data (Figure 3) shows the catch 
 
 
 
-![Rainbow Trout Length (mm) and Weight (g)](figure/plot4_LogLW.png) 
+![Rainbow Trout Natural Log Length (mm) and Weight (g)](figure/plot4_LogLW.png) 
 
 
 
 
 
-To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison (Figure 5, Table 1).  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was 0.986.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
+To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison (Figure 5, Table 2).  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was 0.986.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
 
 
 \pagebreak
 
-**Table 1.  Linear Model.**
+**Table 2.  Linear Model.**
 
-```
-## 
-## Call:
-## lm(formula = subLW$Weight_g ~ subLW$Length_mm)
-## 
-## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -0.9505 -0.0588 -0.0010  0.0588  1.1119 
-## 
-## Coefficients:
-##                 Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)     -10.6363     0.1028    -104   <2e-16 ***
-## subLW$Length_mm   2.8479     0.0187     152   <2e-16 ***
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
-## Residual standard error: 0.144 on 651 degrees of freedom
-## Multiple R-squared:  0.973,	Adjusted R-squared:  0.973 
-## F-statistic: 2.32e+04 on 1 and 651 DF,  p-value: <2e-16
-```
+|id               |  Estimate|  Std. Error|  t value|  Pr(>|t|)|
+|:----------------|---------:|-----------:|--------:|---------:|
+|(Intercept)      |    -10.64|        0.10|   -103.5|         0|
+|subLW$Length_mm  |      2.85|        0.02|    152.3|         0|
 
 
-<br/>
+\pagebreak
 
 ![Linear fit model residuals plots.](figure/Residuals_Plots1.png) ![Linear fit model residuals plots.](figure/Residuals_Plots2.png) ![Linear fit model residuals plots.](figure/Residuals_Plots3.png) ![Linear fit model residuals plots.](figure/Residuals_Plots4.png) 
 
 
-\pagebreak
 
-**Table 2.  Summary table for fish lenght in mm (top), and weight in grams (bottom).**
 
-```
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##      46     216     265     251     297     410
-```
 
-```
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##       3     110     195     191     265     595
-```
 
 
 #### *Population*
@@ -238,7 +215,7 @@ Another assumption is that all fish have the same probability of capture during 
 
 Consequently, assumptions of the experiment were tested with reduced power and the likelihood of bias. While the direction of the bias in the population estimate is unknown, we felt that a moderate loss of relative precision would not compromise the basic results and implications of this study.
 
-In 2002, Black Bear Lake had the sixth largest (N = 993) rainbow trout population on record during the 7 years of monitoring. This is a conservative estimate since fish < 180 mm were not included in the estimate. From our observations it is felt that the true population value probably lies on the upper side of the population estimate, possibly in the region of 1,000 to 1,100 fish.
+In 2002, Black Bear Lake had the fifth largest (N = 993) rainbow trout population on record during the 7 years of monitoring. This is a conservative estimate since fish < 180 mm were not included in the estimate. From our observations it is felt that the true population value probably lies on the upper side of the population estimate, possibly in the region of 1,000 to 1,100 fish.  In addition, the 95% CI for the 2002 estimate was the smallest for all years of monitoring, indicating that a markrecapture study is a reasonable method for comparing population differences among years for fish >180 mm.
 
 \pagebreak
 

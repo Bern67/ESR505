@@ -84,13 +84,7 @@ box()
 
 Black Bear Lake is a deep cirque lake located in steep mountainous terrain near Klawock, Prince of Wales Island, Southeast Alaska (Figure 1, and 2). The lake is 2.4 km long and varies in width from 150 to 643 m. It has a surface area of 87 ha, a volume of 27.14 ha^3 and a maximum depth of 69 m. The shoreline consists primarily of steep bedrock and large boulder, although there are some gravels suitable for spawning near the lake outlet and other small areas around the shoreline. The outlet stream falls approximately 427 m over a distance of approximately 530 m to the lower valley floor and forms a source for Black Bear Creek <cite>(HDR Engineering 1991)</cite>, which drains into Black Lake. The USFWS stocked Black Bear Lake with rainbow trout from Washington State in 1956 to initiate a sport fishery.
 
-
-<<<<<<< HEAD
 ![Black Bear Lake](bbl.jpg "Penstock Instalation near oultet")
-=======
-![Black Bear Lake](bbl.jpg "Hydro Penstock Instalation Near oultet")
->>>>>>> 3e5bf510e25966052cee47d31945d73fc56354ca
-
 
 ### Field Data Collection
 
@@ -159,14 +153,23 @@ Where:
 
 For salmonids, $K$ values usually fall in the range of 0.8 to 2.0.
 
-$K$ value | Comments
---- | ---
-1.60  | *Excellent condition*
-1.40  | *Good condition*
-1.20  | *Fair condition*
-1.00  | *Poor condition*
-0.80  | *Extremely poor condition*
+\pagebreak
 
+Table 1.  Fulton Condition Factor for Salmonids.
+
++-----------+-----------------------------+
+| $K$ value | Comments                    |
++===========+=============================+
+| 1.60      | *Excellent condition*       |
++-----------+-----------------------------+
+| 1.40      | *Good condition*            |
++-----------+-----------------------------+
+| 1.20      | *Fair condition*            |
++-----------+-----------------------------+
+| 1.00      | *Poor condition*            |
++-----------+-----------------------------+
+| 0.80      | *Extremely poor condition*  |
++-----------+-----------------------------+
 
 The results were multiplied by 100,000 to provide an appropriate scaling to the values <cite>(Anderson and Gutreuter 1983)</cite>.
 
@@ -189,7 +192,7 @@ box()
 ```
 
 
-```{r plot4_LogLW, fig.cap="Rainbow Trout Length (mm) and Weight (g)"} 
+```{r plot4_LogLW, fig.cap="Rainbow Trout Natural Log Length (mm) and Weight (g)"} 
 library(dplyr)
 logLW <- rbt %.% select(Length_mm, Weight_g)%.% mutate(Length_mm=log(Length_mm), Weight_g=log(Weight_g))
 logLW <- na.omit(logLW)
@@ -199,7 +202,7 @@ scatter <-function(logLW, Length_mm, Weight_g, RBT) {
   p <- ggplot(data = logLW, aes_string(x = Length_mm, y = Weight_g))
   p <- p + geom_point(color = "Darkgreen") 
   p <- p + stat_smooth(color = "red")
-  p <- p + xlab("Length (mm)")+ ylab("Weight (g)")
+  p <- p + xlab("LN Length (mm)")+ ylab("LN Weight (g)")
   p <- p + theme_bw()
   p <- p + labs (title = RBT)
   print(p)
@@ -212,18 +215,19 @@ scatter(logLW, "Length_mm", "Weight_g", "Rainbow Trout")
 subLW <- subset(logLW, Length_mm > 4)
 ```
 
-To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison (Figure 5, Table 1).  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was `r round(cor(subLW$Weight_g, subLW$Length_mm),3)`.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
+To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison (Figure 5, Table 2).  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was `r round(cor(subLW$Weight_g, subLW$Length_mm),3)`.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
 
 
 \pagebreak
 
-**Table 1.  Linear Model.**
-```{r table1_LM, echo=FALSE, tidy=TRUE}
+**Table 2.  Linear Model.**
+
+```{r table2_LM, echo=FALSE, results='asis'}
 lmfit <- lm(subLW$Weight_g ~ subLW$Length_mm)
-summary(lmfit)
+kable(summary(lmfit)$coef, digits = 2)
 ```
 
-<br/>
+\pagebreak
 
 ```{r Residuals_Plots, echo=FALSE, fig.width=3.5, fig.height=3, fig.cap="Linear fit model residuals plots."}
 plot(lmfit)
@@ -231,18 +235,16 @@ par(mfrow=c(2,2))
 xlab="Weight~Length"
 ```
 
-\pagebreak
 
-**Table 2.  Summary table for fish lenght in mm (top), and weight in grams (bottom).**
-```{r table2_summary, echo=FALSE}
+```{r Length n Weight, include=FALSE}
 # Summary Table of Fish Length (mm)
-length <-na.omit(rbt$Length_mm)
-summary(length)
-
+LW <- rbt %.% select(Length_mm, Weight_g)
+LW <- na.omit(LW)
+summary(LW$Length_mm)
 # Summary Table of Fish Weight (g)
-weight <- na.omit(rbt$Weight_g)
-summary(weight)
+summary(LW$Weight_g)
 ```
+
 
 #### *Population*
 
@@ -311,7 +313,7 @@ Another assumption is that all fish have the same probability of capture during 
 
 Consequently, assumptions of the experiment were tested with reduced power and the likelihood of bias. While the direction of the bias in the population estimate is unknown, we felt that a moderate loss of relative precision would not compromise the basic results and implications of this study.
 
-In 2002, Black Bear Lake had the sixth largest (N = `r round((N), 0)`) rainbow trout population on record during the 7 years of monitoring. This is a conservative estimate since fish < 180 mm were not included in the estimate. From our observations it is felt that the true population value probably lies on the upper side of the population estimate, possibly in the region of 1,000 to 1,100 fish.
+In 2002, Black Bear Lake had the fifth largest (N = `r round((N), 0)`) rainbow trout population on record during the 7 years of monitoring. This is a conservative estimate since fish < 180 mm were not included in the estimate. From our observations it is felt that the true population value probably lies on the upper side of the population estimate, possibly in the region of 1,000 to 1,100 fish.  In addition, the 95% CI for the 2002 estimate was the smallest for all years of monitoring, indicating that a markrecapture study is a reasonable method for comparing population differences among years for fish >180 mm.
 
 \pagebreak
 
@@ -351,8 +353,8 @@ In 2002, Black Bear Lake had the sixth largest (N = `r round((N), 0)`) rainbow t
 ```{r pdf_file, include=FALSE}
 # The Pandoc code below converts markdown file to pdf, or Word docx using the pander package.
 
-# require(pander)
-# Pandoc.convert(f="BBLreport.md", format="pdf", options="-s --toc -V geometry:margin=.75in")
+require(pander)
+Pandoc.convert(f="BBLreport.md", format="pdf", options="-s --toc -V geometry:margin=.75in")
 
 # Pandoc.convert(f="BBLreport.md", format="docx", options="-s")
 ```
