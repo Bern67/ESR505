@@ -23,6 +23,7 @@ This repository is primarily for reference purposes regarding data management an
 
 ___
 ** The required R packages needed for the BBLReport.Rmd markdown files to run properly are: reshape2, dplyr, maps, mapdata, ggplot2, & pander. This file is formatted for PDF output.**
+
 The PDF option at the end of the .Rmd code requires the knitr package, and the installation of Pandoc ([link](https://github.com/jgm/pandoc/releases)) & MikTeX ([link](http://miktex.org/)).
 
 ___
