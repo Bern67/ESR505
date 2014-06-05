@@ -135,7 +135,7 @@ The results were multiplied by 100,000 to provide an appropriate scaling to the 
 
 #### *Size and Age*
 
-A length-frequency histogram of the fish-length data (Figure 3) shows the catch varied by age group. Few small (range 40 to 200 mm) and large (range 320 to 410 mm) fish were caught, but the catch of intermediate-size fish (range 200 to 310 mm) was high. Based on age analysis data from this population, these three length classes correspond to ages 1 through 3, ages 6 and 7, and ages 4 and 5, respectively. Therefore, the majority of the fish caught were between ages 4 and 5.  Very few age 1 fish were caught during this study (Figure 4). This was primarily due to the net mesh size on both the fike nets and hoop traps being too large to capture fish less than 80 mm in length.
+A length-frequency histogram of the fish-length data (Figure 3) shows the catch varied by age group. Few small (range 40 to 200 mm) and large (range 320 to 410 mm) fish were caught, but the catch of intermediate-size fish (range 200 to 310 mm) was high. Based on age analysis data from this population <cite>(Romey 2002)</cite>, these three length classes correspond to ages 1 through 3, ages 6 and 7, and ages 4 and 5, respectively. Therefore, the majority of the fish caught were between ages 4 and 5.  Very few age 1 fish were caught during this study (Figure 4). This was primarily due to the net mesh size on both the fike nets and hoop traps being too large to capture fish less than 80 mm in length.
 
 ![Length-frequency distribution of rainbow trout in Black Bear lake, July 2002.](figure/plot3_LenghFreq.png) 
 
@@ -150,9 +150,7 @@ A length-frequency histogram of the fish-length data (Figure 3) shows the catch 
 To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison (Figure 5, Table 2).  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was 0.986.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
 
 
-\pagebreak
-
-**Table 2.  Linear Model.**
+Table 2.  Linear Model.
 
 |id               |  Estimate|  Std. Error|  t value|  Pr(>|t|)|
 |:----------------|---------:|-----------:|--------:|---------:|
