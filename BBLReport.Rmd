@@ -67,6 +67,7 @@ library(mapdata)
 aa <- rep(1,8); ab <- c(1,1,1,1,2,2,2,2)
 mat <- rbind(aa,ab,ab,aa,aa,aa,aa,aa)
 layout(mat)
+
 map('worldHires', region='USA:Alaska', xlim=c(-140,-129), 
     col="darkgreen")
 bbl_lat <- 55.541175
@@ -74,7 +75,6 @@ bbl_lon <- -132.855405
 points(bbl_lon, bbl_lat, col = "yellow",bg="red", pch = 21, cex = 2)
 map.scale(-139,61, ratio=FALSE, relwidth=0.3, cex=1.1)
 map.axes()
-
 par(mar=c(0,0,0,0))
 map('worldHires', region='USA:Alaska', xlim=c(-175,-125), col="black")
 box()
@@ -106,8 +106,7 @@ Baited hoop traps were 1.4 m long and consisted of four 0.6 m-diameter hoops wit
 
 A CP two-event mark-recapture experiment was used to estimate the abundance, length and age composition for the rainbow trout population >= 180 mm FL in the summer of 2002. The >= 180 mm FL cut-off point is used in similar studies in Southeast Alaska <cite>(e.g., Harding et al. 1999)</cite>. Six-day sampling events were conducted in July 2002.
 
-Chapman’s modification of the Petersen estimator <cite>(Seber 1982)</cite> was used to estimate abundance
-$(N)$ of rainbow trout:
+Chapman’s modification of the Petersen estimator <cite>(Seber 1982)</cite> was used to estimate abundance $(N)$ of rainbow trout:
 
   >$(N) = (M+1)(C+1)/(R+1)$
 
@@ -215,7 +214,7 @@ scatter(logLW, "Length_mm", "Weight_g", "Rainbow Trout")
 subLW <- subset(logLW, Length_mm > 4)
 ```
 
-To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison (Figure 5, Table 2).  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was `r round(cor(subLW$Weight_g, subLW$Length_mm),3)`.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
+To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison (Figure 4, Table 2).  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was `r round(cor(subLW$Weight_g, subLW$Length_mm),3)`.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
 
 
 Table 2.  Linear Model.

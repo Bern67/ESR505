@@ -64,8 +64,7 @@ Baited hoop traps were 1.4 m long and consisted of four 0.6 m-diameter hoops wit
 
 A CP two-event mark-recapture experiment was used to estimate the abundance, length and age composition for the rainbow trout population >= 180 mm FL in the summer of 2002. The >= 180 mm FL cut-off point is used in similar studies in Southeast Alaska <cite>(e.g., Harding et al. 1999)</cite>. Six-day sampling events were conducted in July 2002.
 
-Chapmans modification of the Petersen estimator <cite>(Seber 1982)</cite> was used to estimate abundance
-$(N)$ of rainbow trout:
+Chapmans modification of the Petersen estimator <cite>(Seber 1982)</cite> was used to estimate abundance $(N)$ of rainbow trout:
 
   >$(N) = (M+1)(C+1)/(R+1)$
 
@@ -147,7 +146,7 @@ A length-frequency histogram of the fish-length data (Figure 3) shows the catch 
 
 
 
-To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison (Figure 5, Table 2).  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was 0.986.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
+To better understand the relationship between fish lenght and weight, we transormed the data for a linear comparison (Figure 4, Table 2).  The length-weight relationship was $Log Weight = 2.85 Log Length - 10.64$, and the estimated correlation between weight and length was 0.986.  Since the residuals plots are horizontal (not curved or sloped), equal width, and uniformely scattered along the horizontal axis, we concluded that the regression model is a good fit.  The four age-1 fish (49 to 54 mm) from the second sampling event were not included in the length-weight analysis because they skew the correlation for larger fish.
 
 
 Table 2.  Linear Model.
@@ -213,7 +212,7 @@ Another assumption is that all fish have the same probability of capture during 
 
 Consequently, assumptions of the experiment were tested with reduced power and the likelihood of bias. While the direction of the bias in the population estimate is unknown, we felt that a moderate loss of relative precision would not compromise the basic results and implications of this study.
 
-In 2002, Black Bear Lake had the fifth largest (N = 993) rainbow trout population on record during the 7 years of monitoring. This is a conservative estimate since fish < 180 mm were not included in the estimate. From our observations it is felt that the true population value probably lies on the upper side of the population estimate, possibly in the region of 1,000 to 1,100 fish.  In addition, the 95% CI for the 2002 estimate was the smallest for all years of monitoring, indicating that a markrecapture study is a reasonable method for comparing population differences among years for fish >180 mm.
+In 2002, Black Bear Lake had the fifth largest (N = 993) rainbow trout population on record during the 7 years of monitoring. This is a conservative estimate since fish < 180 mm were not included in the estimate. From our observations it is felt that the true population value probably lies on the upper side of the population estimate, possibly in the region of 1,000 to 1,100 fish.  In addition, the 95% CI for the 2002 estimate was the smallest for all years of monitoring, indicating that a mark-recapture study is a reasonable method for comparing population differences among years for fish >180 mm.
 
 \pagebreak
 
